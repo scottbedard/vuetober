@@ -1,5 +1,10 @@
 <div id="app">
-    <a v-link="{ path: '/' }">Go to the home page</a><br />
-    <a v-link="{ path: '/about' }">Go to the about page</a>
-    <router-view transition="fade" transition-mode="out-in"></router-view>
+    <header>
+        <div class="logo">oc-vuetober-theme</div>
+        <a v-link="{ name: 'home' }">Page 1</a>
+        <a v-link="{ name: 'about' }">Page 2</a>
+    </header>
+    <main>
+        <router-view transition="fade" transition-mode="out-in"></router-view>
+    </main>
 </div>
