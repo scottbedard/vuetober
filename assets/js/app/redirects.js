@@ -1,0 +1,8 @@
+//
+// Redirects
+//
+module.exports = {
+
+    '/': '/home',
+
+};
