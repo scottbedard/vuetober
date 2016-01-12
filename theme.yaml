@@ -3,3 +3,5 @@ description: 'An opinionated approach to SPAs with OctoberCMS and Vue.js'
 author: 'Scott Bedard'
 homepage: 'http://scottbedard.net'
 code: oc-vuetober-theme
+require:
+    - Owl.RainLabBlogApi

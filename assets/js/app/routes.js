@@ -10,6 +10,10 @@ module.exports = {
         name: 'about',
         component: require('./../pages/about/about'),
     },
+    '/blog': {
+        name: 'blog',
+        component: require('./../pages/blog/blog'),
+    },
     '*': {
         name: '404',
         component: require('./../pages/404/404'),

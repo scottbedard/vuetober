@@ -1,0 +1,9 @@
+<div class="page blog-page">
+    <div>Blog Example</div>
+    <ul>
+        <li v-for="post in posts">
+            <h2>{{ post.title }}</h2>
+            {{{ post.content_html }}}
+        </li>
+    </ul>
+</div>
