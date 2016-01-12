@@ -1,5 +1,5 @@
 <p align="center">
-    <a href="//octobercms/october" target="_blank"><img src="//octobercms/october/blob/master/themes/demo/assets/images/october.png?raw=true" alt="October" width="auto" height="100px" /></a><a href="//vuejs/vue" target="_blank"><img src="http://vuejs.org/images/logo.png" width="auto" height="105px"></a>
+    <a href="//github.com/octobercms/october" target="_blank"><img src="//github.com/octobercms/october/blob/master/themes/demo/assets/images/october.png?raw=true" alt="October" width="auto" height="100px" /></a><a href="//github.com/vuejs/vue" target="_blank"><img src="http://vuejs.org/images/logo.png" width="auto" height="105px"></a>
 </p>
 
 <p align="center">A single page application build with October CMS and Vue.js</p>
