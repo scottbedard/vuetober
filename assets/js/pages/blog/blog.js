@@ -9,15 +9,6 @@ module.exports = {
     template: require('./template.htm'),
 
     /**
-     * @return {Object}
-     */
-    data() {
-        return {
-            posts: [],
-        }
-    },
-
-    /**
      * Fetch route data
      *
      * @type {Object}
@@ -28,5 +19,24 @@ module.exports = {
                 this.$set('posts', response.data.data);
             });
         },
+    },
+
+    /**
+     * @return {Object}
+     */
+    data() {
+        return {
+            posts: [],
+        }
+    },
+
+    /**
+     * The page is ready to be displayed.
+     *
+     * @return {void}
+     */
+    created() {
+        document.title = 'Blog posts';
+        console.log ('ready');
     },
 };
