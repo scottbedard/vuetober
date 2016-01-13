@@ -2,8 +2,9 @@
     <div>Blog Example</div>
     <ul>
         <li v-for="post in posts">
-            <h2>{{ post.title }}</h2>
-            {{{ post.content_html }}}
+            <a v-link="{ name: 'blog-show', params: { slug: post.slug }}">
+                <h2>{{ post.title }}</h2>
+            </a>
         </li>
     </ul>
 </div>

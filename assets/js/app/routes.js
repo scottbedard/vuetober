@@ -22,7 +22,7 @@ module.exports = {
     },
 
     '/blog/:slug': {
-        name: 'blog-post',
+        name: 'blog-show',
         component: require('./../pages/blog/show'),
     },
 
