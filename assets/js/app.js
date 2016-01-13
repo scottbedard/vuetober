@@ -16,6 +16,7 @@ let App = require('./app/root'),
 
 Router.map(require('./app/routes'));
 Router.redirect(require('./app/redirects'));
+Router.afterEach(require('./app/afterRoute'));
 
 //
 // Go

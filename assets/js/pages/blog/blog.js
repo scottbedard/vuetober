@@ -1,12 +1,12 @@
 //
-// About page
+// Blog page
 //
 module.exports = {
 
     /**
      * @type {String}
      */
-    template: require('./template.htm'),
+    template: require('./templates/index.htm'),
 
     /**
      * Fetch route data
@@ -27,16 +27,6 @@ module.exports = {
     data() {
         return {
             posts: [],
-        }
-    },
-
-    /**
-     * The page is ready to be displayed.
-     *
-     * @return {void}
-     */
-    created() {
-        document.title = 'Blog posts';
-        console.log ('ready');
+        };
     },
 };
