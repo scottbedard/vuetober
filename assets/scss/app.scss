@@ -5,16 +5,23 @@
 @import './vendor/normalize';
 
 //
-// Utilities
+// Config & Mixins
 //
-@import './utilities/vue-transitions';
+@import './config';
+@import './mixins/breakpoints';
+@import './mixins/transition';
 
 //
-// Elements
+// Layout
 //
-@import './elements/html';
-@import './elements/header';
-@import './elements/main';
+@import './layout/html';
+@import './layout/header';
+@import './layout/main';
+
+//
+// User interfaces
+//
+@import './ui/links';
 
 //
 // Pages

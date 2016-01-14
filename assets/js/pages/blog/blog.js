@@ -15,8 +15,8 @@ module.exports = {
      */
     route: {
         data(transition) {
-            this.$http.get('owl/rainlabblogapi/post').then(response => {
-                this.$set('posts', response.data.data);
+            this.$http.get('/owl/rainlabblogapi/post').then(response => {
+                this.$set('posts', response.data);
             });
         },
     },

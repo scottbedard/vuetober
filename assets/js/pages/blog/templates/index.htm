@@ -1,10 +1,8 @@
 <div class="page blog-page">
-    <div>Blog Example</div>
     <ul>
         <li v-for="post in posts">
-            <a v-link="{ name: 'blog-show', params: { slug: post.slug }}">
-                <h2>{{ post.title }}</h2>
-            </a>
+            <h3>{{ post.published_at | moment 'MMM DD, YYYY' }}</h3>
+            <h2><a v-link="{ name: 'blog-show', params: { slug: post.slug }}">{{ post.title }}</a></h2>
         </li>
     </ul>
 </div>

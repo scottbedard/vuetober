@@ -7,6 +7,7 @@ let Vue = require('vue'),
 
 Vue.use(VueRouter);
 Vue.use(VueResource);
+require('./app/filters');
 
 //
 // Get set

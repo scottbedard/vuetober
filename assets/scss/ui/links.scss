@@ -1,0 +1,9 @@
+a {
+    color: darken($font-color, 10%);
+    text-decoration: none;
+    @include transition(color);
+
+    &:hover {
+        color: #F46A65;
+    }
+}

@@ -1,7 +1,25 @@
 .blog-page {
+
     ul {
+        list-style-type: none;
         margin: 0;
         padding: 0;
-        list-style-type: none;
+
+        li {
+            padding: 20px 0;
+
+            h3 {
+                color: #666;
+                font-size: 18px;
+                margin: 0;
+                padding: 0;
+            }
+
+            h2 {
+                font-size: 24px;
+                margin: 0;
+                padding: 0;
+            }
+        }
     }
 }

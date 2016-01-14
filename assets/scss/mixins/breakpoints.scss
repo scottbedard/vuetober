@@ -1,0 +1,38 @@
+/**
+ * Breakpoint mixin for pre-defined or custom values
+ *
+ * .foo {
+ *     color: red;
+ *     @include bp(tablet) { color: green }
+ *     @include bp('min-width: 900px') { color: blue }
+ * }
+ *
+ * .bar {
+ *     @include bp-prop(color, red, green, blue);
+ * }
+ */
+@mixin bp($bp) {
+    @if map-get($breakpoints, $bp) {
+        @media screen and (map-get($breakpoints, $bp)) {
+            @content;
+        }
+    } @else {
+        @media screen and ($bp) {
+            @content;
+        }
+    }
+}
+
+@mixin bp-prop($property, $mobile, $tablet: false, $desktop: false) {
+    #{ unquote($property) }: $mobile;
+    @if ($tablet) {
+        @include bp(tablet) {
+            #{ unquote($property) }: $tablet;
+        }
+        @if ($desktop) {
+            @include bp(desktop) {
+                #{ unquote($property) }: $desktop;
+            }
+        }
+    }
+}
