@@ -13,19 +13,17 @@ is_hidden = 0
         <link rel="stylesheet" type="text/css" href="{{ 'assets/compiled/style.min.css'|theme }}">
     </head>
     <body>
-
         <div id="app">
             <header>
                 <div class="logo">oc-vuetober-theme</div>
-                <a v-link="{ name: 'home' }">Page 1</a>
-                <a v-link="{ name: 'about' }">Page 2</a>
+                <a v-link="{ name: 'home' }">Home</a>
+                <a v-link="{ name: 'about' }">About</a>
                 <a v-link="{ name: 'blog' }">Blog Example</a>
             </header>
             <main>
                 <router-view transition="fade" transition-mode="out-in"></router-view>
             </main>
         </div>
-
         <script src="{{ 'assets/compiled/app.min.js'|theme }}"></script>
     </body>
 </html>

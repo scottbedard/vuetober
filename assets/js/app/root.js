@@ -6,16 +6,9 @@ let Vue = require('vue');
 module.exports = Vue.extend({
 
     /**
-     * @type {String}
-     */
-    // template: require('./layout.htm'),
-
-    /**
      * Components
      *
      * @type {Object}
      */
-    components: {
-
-    },
+    components: { },
 });
