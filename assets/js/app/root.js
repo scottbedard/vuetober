@@ -8,7 +8,7 @@ module.exports = Vue.extend({
     /**
      * @type {String}
      */
-    template: require('./layout.htm'),
+    // template: require('./layout.htm'),
 
     /**
      * Components
