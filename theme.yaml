@@ -4,4 +4,5 @@ author: 'Scott Bedard'
 homepage: 'http://scottbedard.net'
 code: oc-vuetober-theme
 require:
+    - Bedard.Vuetober
     - Owl.RainLabBlogApi

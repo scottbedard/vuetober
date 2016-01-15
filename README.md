@@ -4,11 +4,21 @@
 
 <p align="center">A single page application built with October CMS and Vue.js</p>
 
+> **Warning:** This repository is an experimental October theme, and should be treated as such.
+
 ### Installation
 1. Clone the repository into your `/themes` directory.
 2. Install theme dependencies `npm install`.
 3. Assemble theme assets `gulp compile`
+4. Install the Bedard.Vuetober plugin `git clong https://github.com/scottbedard/oc-vuetober-plugin.git`
 4. Install the RainLab.Blog plugin `php artisan plugin:install RainLab.Blog`
+5. Install the Owl.RainLabBlogApi plugin `git clone https://github.com/october-widgets/rainlab-blog-api.git`
 
-### Getting started
-Standard pages can be made by adding a route in `/assets/js/app/routes.js`, and creating the matching component in `/assets/js/pages` directory. For pages that need data from the server, take a look at the [example blog page](https://github.com/scottbedard/oc-vuetober-theme/blob/master/assets/js/pages/blog).
+### Routing
+To register a route or redirect, simply create an entry in `/assets/js/app/routes.js` or `/assets/js/app/redirects.js`. For more information how routing works, please visit the [vue-router documentation](http://vuejs.github.io/vue-router/en/index.html).
+
+
+### Pages
+A few examples have been made to help get you started. For basic pages, simply add a Vue component to the `/pages` directory. The `/blog` pages demonstrate how to fetch data from the server, and use route parameters. For more information on making requests, please visit the [vue-resource documentation](https://github.com/vuejs/vue-resource).
+
+Static content can be fetched from the server, and then cached for a period of time. For an example of this, take a look at the `/about` page.
