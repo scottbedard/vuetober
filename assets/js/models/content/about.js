@@ -32,6 +32,6 @@ module.exports = {
      * @return {void}
      */
     fetch() {
-        return Cache.getContent(this, 'about');
+        Cache.getContent(this, 'about');
     },
 };
