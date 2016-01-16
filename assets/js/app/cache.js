@@ -30,15 +30,23 @@ module.exports = {
     /**
      * Fetch data from the server
      *
-     * @param  {Object} params
+     * @param  {String}     endpoint
+     * @param  {Object}     params
      * @return {Promise}
      */
-    fetchFromServer(params) {
-        return Vue.http.get('/', params);
+    fetchFromServer(model, endpoint, params) {
+        return new Promise((resolve, reject) => {
+            Vue.http.get(endpoint, params)
+                .then(response => {
+                    this.addToStorage(model, response);
+                    resolve(response);
+                })
+                .catch(error => reject());
+        });
     },
 
     /**
-     * Fetch data out of localStorage by key
+     * Fetch static content out of localStorage by key
      *
      * @param  {Object}     model
      * @return {Promise}
@@ -55,6 +63,27 @@ module.exports = {
     },
 
     /**
+     * Fetch models out of localStorage by key
+     * @param  {Object} model
+     * @param  {String} endpoint
+     * @return {void}
+     */
+    getModel(model, endpoint) {
+        let fill = function(data) {
+            for (let key of Object.keys(data)) {
+                model.state[key] = data[key];
+            }
+        };
+
+        this.fetchFromStorage(model)
+            .then(response => fill(response.data))
+            .catch(failure => {
+                this.fetchFromServer(model, endpoint)
+                    .then(response => fill(response.data));
+            });
+    },
+
+    /**
      * Fetch and cache static content
      *
      * @param  {Object} model
@@ -62,17 +91,16 @@ module.exports = {
      * @return {void}
      */
     getContent(model, content) {
+        let fill = function(data) {
+            model.state.content = data;
+        }
+
         this.fetchFromStorage(model)
-            .then(response => {
-                model.state.content = response.data;
-            })
+            .then(response => fill(response.data))
             .catch(failed => {
-                this.fetchFromServer({ 'v-content': content })
-                    .then(response => {
-                        this.addToStorage(model, response);
-                        model.state.content = response.data;
-                    });
-        });
+                this.fetchFromServer(model, '/', { 'v-content': content })
+                    .then(response =>fill(response.data));
+            });
     },
 
     /**

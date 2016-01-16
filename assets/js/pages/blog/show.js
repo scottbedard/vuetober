@@ -1,3 +1,4 @@
+let Post = require('../../models/blog/post');
 //
 // Blog-post
 //
@@ -19,16 +20,7 @@ module.exports = {
          * @return void
          */
         data(transition) {
-            let slug = this.$route.params.slug;
-            this.$http.get(`/owl/rainlabblogapi/post/${ slug }`).then(
-                response => {
-                    this.$set('post', response.data);
-                    document.title = response.data.title;
-                },
-                error => {
-                    // 404
-                },
-            );
+            Post.fetch(this.$route.params.slug);
         },
     },
 
@@ -37,7 +29,7 @@ module.exports = {
      */
     data() {
         return {
-            post: {},
+            post: Post.state,
         };
     },
 };
