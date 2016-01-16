@@ -47,8 +47,7 @@ module.exports = {
         return new Promise((resolve, reject) => {
             let cached = JSON.parse(window.localStorage.getItem(model.key));
             if (cached && this.isUsable(model, cached)) {
-                model.state.content = cached.data;
-                resolve();
+                resolve(cached);
             } else {
                 reject();
             }
@@ -63,14 +62,16 @@ module.exports = {
      * @return {void}
      */
     getContent(model, content) {
-        // Fetch the content from storage
-        this.fetchFromStorage(model).catch(failed => {
-
-            // If that fails, fetch it from the server
-            this.fetchFromServer({ 'v-content': content }).then(response => {
-                this.addToStorage(model, response);
+        this.fetchFromStorage(model)
+            .then(response => {
                 model.state.content = response.data;
-            });
+            })
+            .catch(failed => {
+                this.fetchFromServer({ 'v-content': content })
+                    .then(response => {
+                        this.addToStorage(model, response);
+                        model.state.content = response.data;
+                    });
         });
     },
 
