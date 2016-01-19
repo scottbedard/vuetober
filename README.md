@@ -3,9 +3,7 @@
 </p>
 
 <p align="center">A single page application built with October CMS and Vue.js</p>
-<p align="center">A live demo for this theme can be found <a href="http://vuetober.scottbedard.net">here</a></p>
-
-> **Warning:** This repository is an experimental October theme, and should be treated as such.
+<p align="center"><a href="http://vuetober.scottbedard.net">Live demo</a></p>
 
 ### Installation
 1. Clone the repository into your `/themes` directory.
