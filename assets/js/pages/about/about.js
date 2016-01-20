@@ -1,4 +1,4 @@
-let content = require('./../../models/content/about');
+let content = require('models/content/about');
 
 //
 // About page
@@ -8,7 +8,7 @@ module.exports = {
     /**
      * @type {String}
      */
-    template: require('./template.htm'),
+    template: require('./template'),
 
     /**
      * Fetch route data

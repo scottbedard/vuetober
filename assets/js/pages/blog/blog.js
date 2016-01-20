@@ -6,7 +6,7 @@ module.exports = {
     /**
      * @type {String}
      */
-    template: require('./templates/index.htm'),
+    template: require('./templates/index'),
 
     /**
      * Fetch route data

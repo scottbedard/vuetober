@@ -6,5 +6,5 @@ module.exports = {
     /**
      * @type {String}
      */
-    template: require('./template.htm'),
+    template: require('./template'),
 };

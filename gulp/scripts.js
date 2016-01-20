@@ -14,7 +14,8 @@ var babelify = require('babelify'),
 module.exports = function() {
     return browserify('./assets/js/app.js', {
             debug: true,
-            extensions: ['.js'],
+            extensions: ['.js', '.htm'],
+            paths: ['./node_modules', './assets/js'],
         })
         .transform(stringify({
             extensions: ['.htm'],

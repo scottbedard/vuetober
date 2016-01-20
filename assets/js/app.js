@@ -7,17 +7,17 @@ let Vue = require('vue'),
 
 Vue.use(VueRouter);
 Vue.use(VueResource);
-require('./app/filters');
+require('app/filters');
 
 //
 // Get set
 //
-let App = require('./app/root'),
-    Router = new VueRouter(require('./app/config'));
+let App = require('app/root'),
+    Router = new VueRouter(require('app/config'));
 
-Router.map(require('./app/routes'));
-Router.redirect(require('./app/redirects'));
-Router.afterEach(require('./app/afterRoute'));
+Router.map(require('app/routes'));
+Router.redirect(require('app/redirects'));
+Router.afterEach(require('app/afterRoute'));
 
 //
 // Go

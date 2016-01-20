@@ -6,30 +6,30 @@ module.exports = {
     '/home': {
         name: 'home',
         title: 'Home',
-        component: require('./../pages/home/home'),
+        component: require('pages/home/home'),
     },
 
     '/about': {
         name: 'about',
         title: 'About',
-        component: require('./../pages/about/about'),
+        component: require('pages/about/about'),
     },
 
     '/blog': {
         name: 'blog',
         title: 'Blog',
-        component: require('./../pages/blog/blog'),
+        component: require('pages/blog/blog'),
     },
 
     '/blog/:slug': {
         name: 'blog-show',
-        component: require('./../pages/blog/show'),
+        component: require('pages/blog/show'),
     },
 
     '*': {
         name: '404',
         title: 'Page not found',
-        component: require('./../pages/404/404'),
+        component: require('pages/404/404'),
     },
 
 };

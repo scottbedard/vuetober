@@ -1,5 +1,5 @@
 let Vue = require('vue'),
-    Cache = require('./../../app/cache');
+    Cache = require('app/cache');
 
 module.exports = {
 

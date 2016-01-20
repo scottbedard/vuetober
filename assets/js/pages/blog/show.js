@@ -7,7 +7,7 @@ module.exports = {
     /**
      * @type {String}
      */
-    template: require('./templates/show.htm'),
+    template: require('./templates/show'),
 
     /**
      * @type {Object}
