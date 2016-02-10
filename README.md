@@ -2,8 +2,11 @@
     <a href="//github.com/octobercms/october" target="_blank"><img src="https://raw.githubusercontent.com/octobercms/october/master/themes/demo/assets/images/october.png" alt="October" width="auto" height="100px" /></a><a href="//github.com/vuejs/vue" target="_blank"><img src="http://vuejs.org/images/logo.png" width="auto" height="105px"></a>
 </p>
 
+
 <p align="center">A single page application built with October CMS and Vue.js</p>
 <p align="center"><a href="http://vuetober.scottbedard.net">Live demo</a></p>
+
+> **Warning:** This approach has been ditched in favor of Webpack. This branch is not maintained.
 
 ### Installation
 1. Clone the repository into your `/themes` directory.
@@ -15,7 +18,6 @@
 
 ### Routing
 To register a route or redirect, simply create an entry in `/assets/js/app/routes.js` or `/assets/js/app/redirects.js`. For more information how routing works, please visit the [vue-router documentation](http://vuejs.github.io/vue-router/en/index.html).
-
 
 ### Pages
 A few examples have been made to help get you started. For basic pages, simply add a Vue component to the `/pages` directory. The `/blog` pages demonstrate how to fetch data from the server, and use route parameters. For more information on making requests, please visit the [vue-resource documentation](https://github.com/vuejs/vue-resource).
