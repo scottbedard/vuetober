@@ -5,6 +5,7 @@
 <p align="center">A single page application built with October CMS and Vue.js</p>
 <p align="center"><a href="http://vuetober.scottbedard.net">Live demo</a></p>
 
+<<<<<<< Updated upstream
 ### Installation
 1. Clone the repository into your `/themes` directory.
 2. Install theme dependencies `npm install`.
@@ -21,3 +22,10 @@ To register a route or redirect, simply create an entry in `/assets/js/app/route
 A few examples have been made to help get you started. For basic pages, simply add a Vue component to the `/pages` directory. The `/blog` pages demonstrate how to fetch data from the server, and use route parameters. For more information on making requests, please visit the [vue-resource documentation](https://github.com/vuejs/vue-resource).
 
 Static content can be fetched from the server, and then cached for a period of time. For an example of this, take a look at the `/about` page.
+=======
+> **Info:** This repo is currently being re-done to utilize Webpack, check back soon.
+
+### Installation
+1. Install [vue-cli](https://github.com/vuejs/vue-cli)
+2. `vue init scottbedard/oc-vuepack-cli myproject`
+>>>>>>> Stashed changes
