@@ -12,7 +12,7 @@ cd my-theme
 npm install
 ```
 
-The dev server can be fired up `http://localhost:3000` with the following command.
+The dev server can be fired up on `localhost:3000` with the following command.
 
 ```bash
 npm run dev
