@@ -53,8 +53,8 @@ config.plugins = (config.plugins || []).concat([
 
     // generate dist index.html with correct asset hash for caching
     new HtmlWebpackPlugin({
-        filename: './../pages/index.htm',
-        template: 'src/index.htm',
+        filename: './../pages/theme.htm',
+        template: 'src/theme.htm',
         inject: true,
         minify: {
             // https://github.com/kangax/html-minifier#options-quick-reference

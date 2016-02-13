@@ -26,8 +26,8 @@ config.plugins = (config.plugins || []).concat([
     new webpack.NoErrorsPlugin(),
     // https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
-        filename: 'index.htm',
-        template: 'src/index.htm'
+        filename: 'theme.htm',
+        template: 'src/theme.htm'
     })
 ])
 
