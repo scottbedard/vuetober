@@ -21,7 +21,7 @@ function generateExtractLoaders (loaders) {
 }
 
 config.vue.loaders = {
-    js: 'babel!eslint',
+    js: 'babel', // babel!eslint
     // http://vuejs.github.io/vue-loader/configurations/extract-css.html
     css: ExtractTextPlugin.extract('vue-style-loader', generateExtractLoaders(['css'])),
     less: ExtractTextPlugin.extract('vue-style-loader', generateExtractLoaders(['css', 'less'])),
@@ -38,8 +38,10 @@ config.plugins = (config.plugins || []).concat([
         }
     }),
 
+    // https://github.com/mishoo/UglifyJS2#compressor-options
     new webpack.optimize.UglifyJsPlugin({
         compress: {
+            drop_console: true,
             warnings: false
         }
     }),
