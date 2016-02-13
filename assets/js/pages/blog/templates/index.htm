@@ -1,8 +1,0 @@
-<div class="page blog-page">
-    <ul>
-        <li v-for="post in posts">
-            <h3>{{ post.published_at | moment 'MMM DD, YYYY' }}</h3>
-            <h2><a v-link="{ name: 'blog-show', params: { slug: post.slug }}">{{ post.title }}</a></h2>
-        </li>
-    </ul>
-</div>

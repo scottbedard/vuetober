@@ -1,31 +1,69 @@
-<p align="center">
-    <a href="//github.com/octobercms/october" target="_blank"><img src="https://raw.githubusercontent.com/octobercms/october/master/themes/demo/assets/images/october.png" alt="October" width="auto" height="100px" /></a><a href="//github.com/vuejs/vue" target="_blank"><img src="http://vuejs.org/images/logo.png" width="auto" height="105px"></a>
-</p>
+# vue-webpack-boilerplate
 
-<p align="center">A single page application built with October CMS and Vue.js</p>
-<p align="center"><a href="http://vuetober.scottbedard.net">Live demo</a></p>
+> A full-featured Webpack setup with hot-reload, lint-on-save, unit testing & css extraction.
 
-<<<<<<< Updated upstream
-### Installation
-1. Clone the repository into your `/themes` directory.
-2. Install theme dependencies `npm install`.
-3. Assemble theme assets `gulp compile`
-4. Install the Bedard.Vuetober plugin `git clong https://github.com/scottbedard/oc-vuetober-plugin.git`
-4. Install the RainLab.Blog plugin `php artisan plugin:install RainLab.Blog`
-5. Install the Owl.RainLabBlogApi plugin `git clone https://github.com/october-widgets/rainlab-blog-api.git`
+### Usage
 
-### Routing
-To register a route or redirect, simply create an entry in `/assets/js/app/routes.js` or `/assets/js/app/redirects.js`. For more information how routing works, please visit the [vue-router documentation](http://vuejs.github.io/vue-router/en/index.html).
+This is a project template for [vue-cli](https://github.com/vuejs/vue-cli).
 
+``` bash
+$ npm install -g vue-cli
+$ vue init webpack my-project
+$ cd my-project
+$ npm install
+$ npm run dev
+```
 
-### Pages
-A few examples have been made to help get you started. For basic pages, simply add a Vue component to the `/pages` directory. The `/blog` pages demonstrate how to fetch data from the server, and use route parameters. For more information on making requests, please visit the [vue-resource documentation](https://github.com/vuejs/vue-resource).
+### What's Included
 
-Static content can be fetched from the server, and then cached for a period of time. For an example of this, take a look at the `/about` page.
-=======
-> **Info:** This repo is currently being re-done to utilize Webpack, check back soon.
+- `npm run dev`: first-in-class development experience.
+  - Webpack + `vue-loader` for single file Vue components.
+  - State preserving hot-reload
+  - State preserving compilation error overlay
+  - Lint-on-save with ESLint
+  - Source maps
 
-### Installation
-1. Install [vue-cli](https://github.com/vuejs/vue-cli)
-2. `vue init scottbedard/oc-vuepack-cli myproject`
->>>>>>> Stashed changes
+- `npm run build`: Production ready build.
+  - JavaScript minified with [UglifyJS](https://github.com/mishoo/UglifyJS2).
+  - HTML minified with [html-minifier](https://github.com/kangax/html-minifier).
+  - CSS across all components extracted into a single file and minified with [cssnano](https://github.com/ben-eb/cssnano).
+  - All static assets compiled with version hashes for efficient long-term caching, and a production `index.html` is auto-generated with proper URLs to these generated assets.
+
+- `npm test`: Unit tests run in PhantomJS with Karma + karma-jasmine + karma-webpack.
+  - Supports ES2015 in test files.
+  - Supports all webpack loaders.
+  - Easy [mock injection](http://vuejs.github.io/vue-loader/workflow/testing-with-mocks.html).
+
+For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+### Customizations
+
+You will likely need to do some tuning to suit your own needs:
+
+- Install additional libraries that you need, e.g. `vue-router`, `vue-resource`, `vuex`, etc...
+
+- Use your preferred `.eslintrc` config.
+
+- Add your preferred CSS pre-processor, for example:
+
+  ``` bash
+  npm install less-loader --save-dev
+  ```
+
+- Working with an existing backend server:
+
+  - The dev server is simply an [Express](http://expressjs.com/) server with [webpack-dev-middleware](https://github.com/webpack/webpack-dev-middleware) and [webpack-hot-middleware](https://github.com/glenjamin/webpack-hot-middleware) pre-configured. You can add your own routing rules to `build/dev-server.js` to proxy certain requests to an existing backend server. Or, if you are using Express yourself, you can simply copy the middleware configuration, but **make sure to add them only in development mode!**
+
+- For unit testing:
+
+  - You can run the tests in multiple real browsers by installing more [karma launchers](http://karma-runner.github.io/0.13/config/browsers.html) and adjusting the `browsers` field in `build/karma.conf.js`.
+
+  - You can also swap out Jasmine for other testing frameworks, e.g. use Mocha with [karma-mocha](https://github.com/karma-runner/karma-mocha).
+
+### Fork It And Make Your Own
+
+You can fork this repo to create your own boilerplate, and use it with `vue-cli`:
+
+``` bash
+vue init username/repo my-project
+```
