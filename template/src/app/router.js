@@ -11,10 +11,10 @@ export var config = {
 // Application routes
 //
 export var routes = {
-    '/home': {
-        name: 'home',
-        title: 'Home',
-        component: require('./../pages/home'),
+    '/intro': {
+        name: 'intro',
+        title: 'Introduction',
+        component: require('./../pages/intro'),
     },
 
     '/sandbox': {
@@ -28,5 +28,5 @@ export var routes = {
 // Redirects
 //
 export var redirects = {
-    '/': '/home',
+    '/': '/intro',
 };
