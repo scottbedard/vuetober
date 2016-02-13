@@ -1,8 +1,20 @@
-import Vue from 'vue'
-import App from './App'
+//
+// On your mark
+//
+import Vue from 'vue';
+import VueRouter from 'vue-router';
 
-/* eslint-disable no-new */
-new Vue({
-  el: 'body',
-  components: { App }
-})
+//
+// Get set
+//
+Vue.use(VueRouter);
+import { config, routes, redirects } from './app/router';
+let Router = new VueRouter(config);
+Router.map(routes);
+Router.redirect(redirects);
+
+//
+// Go!
+//
+import Root from './app/root';
+Router.start(Root, '#app');

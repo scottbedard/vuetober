@@ -26,7 +26,7 @@ module.exports = {
             },
             {
                 test: /\.js$/,
-                loader: 'babel!eslint',
+                loader: 'babel', // babel!eslint
                 exclude: /node_modules/,
             },
             {
@@ -45,10 +45,10 @@ module.exports = {
     },
     vue: {
         loaders: {
-            js: 'babel!eslint',
+            js: 'babel', // babel!eslint
         },
     },
-    eslint: {
-        formatter: require('eslint-friendly-formatter'),
-    },
+    // eslint: {
+    //     formatter: require('eslint-friendly-formatter'),
+    // },
 };
