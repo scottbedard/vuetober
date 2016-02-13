@@ -6,7 +6,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
-    publicPath: '/',
+    publicPath: '/themes/{{ name }}/dist/',
     filename: '[name].js'
   },
   resolve: {

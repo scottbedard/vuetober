@@ -21,27 +21,22 @@ browserSync({
     proxy: "{{ proxy }}",
     middleware: [
         webpackDevMiddleware(bundler, {
-            // IMPORTANT: dev middleware can't access config, so we should
-            // provide publicPath by ourselves
             publicPath: webpackConfig.output.publicPath,
-
-            // pretty colored output
             stats: {
                 colors: true,
                 chunks: false
             }
-
-            // for other settings see
-            // http://webpack.github.io/docs/webpack-dev-middleware.html
         }),
-
-        // bundler should be the same as above
         webpackHotMiddleware(bundler)
     ],
-
-    // no need to watch '*.js' here, webpack will take care of it for us,
-    // including full page reloads if HMR won't work
-    files: [
-        path.join(webpackConfig.resolve.alias.src, '*.html')
-    ]
+    rewriteRules: [
+      {
+        match: /<link href="(.*)app\.(.*)\.css" rel="stylesheet">/ig,
+        fn: function(match) { return '<link href="/app.css" rel="stylesheet">' }
+      },
+      {
+        match: /<script src="(.*)app\.(.*)\.js"><\/script>/ig,
+        fn: function(match) { return '<script src="/app.js"></script>' }
+      },
+    ],
 })

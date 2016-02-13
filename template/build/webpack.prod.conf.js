@@ -49,8 +49,10 @@ config.plugins = (config.plugins || []).concat([
   // you can customize output by editing /build/index.template.html
   // see https://github.com/ampedandwired/html-webpack-plugin
   new HtmlWebpackPlugin({
-    filename: '../../pages/index.htm',
+    filename: './../pages/index.htm',
     template: 'src/index.htm',
+    inject: true,
+    minify: { }, // https://github.com/kangax/html-minifier#options-quick-reference
   })
 ])
 
