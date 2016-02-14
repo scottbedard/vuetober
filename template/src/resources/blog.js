@@ -2,7 +2,10 @@ import Vue from 'vue';
 
 module.exports = {
 
-    url: '/owl/rainlabblogapi/posts{/slug}',
+    /**
+     * @type {String}
+     */
+    url: '/api/rainlab/blog{/slug}',
 
     /**
      * Make a get request to the blog api
