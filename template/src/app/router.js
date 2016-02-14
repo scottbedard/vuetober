@@ -1,43 +1,43 @@
 //
 // Config
 //
-export var config = {
-    hashbang: false,
-    history: true,
-    saveScrollPosition: true,
-};
+module.exports = {
 
-//
-// Application routes
-//
-export var routes = {
-    '/intro': {
-        name: 'intro',
-        title: 'Introduction',
-        component: require('./../pages/intro'),
+    /**
+     * Config
+     *
+     * @type {Object}
+     */
+    config: {
+        hashbang: false,
+        history: true,
+        saveScrollPosition: true,
     },
 
-    '/blog': {
-        name: 'blog',
-        title: 'Communicating with October',
-        component: require('./../pages/blog/index'),
+    /**
+     * Before route starts transitioning
+     *
+     * @param  {Object}     options.from        Route we are transitioning from
+     * @param  {Object}     options.to          Route we are transitioning to
+     * @param  {Function}   options.next        Progress to the next step of the transition
+     * @param  {Function}   options.abort       Cancel / reject the transition
+     * @param  {Function}   options.redirect    Cancel and redirect to a different route
+     * @return {void}
+     */
+    before({ from, to, next, abort, redirect }) {
+        next();
     },
 
-    '/blog/:slug': {
-        name: 'blog-post',
-        component: require('./../pages/blog/post'),
+    /**
+     * After route has transitioned
+     *
+     * @param  {Object}     options.from        Route we are transitioning from
+     * @param  {Object}     options.to          Route we are transitioning to
+     * @return {void}
+     */
+    after({ from, to }) {
+        if (typeof to.title !== 'undefined') {
+            document.title = to.title;
+        }
     },
-
-    '/sandbox': {
-        name: 'sandbox',
-        title: 'Sandbox',
-        component: require('./../pages/sandbox')
-    }
-};
-
-//
-// Redirects
-//
-export var redirects = {
-    '/': '/intro',
 };
