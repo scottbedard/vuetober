@@ -21,12 +21,9 @@ header {
 </template>
 
 <script>
-import Nav from './../components/nav';
-
 export default {
-
     components: {
-        'v-nav': Nav,
+        'v-nav': require('./../components/nav'),
     },
 }
 </script>

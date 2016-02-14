@@ -5,16 +5,22 @@ ul {
     padding: 0;
 }
 
-li {
-    display: inline-block;
-    padding: 10px;
+a {
+    transition: all 0.5s ease;
+
+    &.v-link-active {
+        color: black;
+        font-size: 28px;
+    }
 }
+
 </style>
 
 <template>
 <nav>
     <ul>
         <li><a v-link="{ name: 'intro' }">Introduction</a></li>
+        <li><a v-link="{ name: 'blog' }">Communicating with October</a></li>
         <li><a v-link="{ name: 'sandbox' }">Sandbox</a></li>
     </ul>
 </nav>
