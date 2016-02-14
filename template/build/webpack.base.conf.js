@@ -1,4 +1,5 @@
-var path = require('path')
+var path = require('path');
+var webpack = require('webpack');
 
 module.exports = {
     entry: {
@@ -56,6 +57,9 @@ module.exports = {
             js: 'babel', // babel!eslint
         },
     },
+    plugins: [
+        new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js'),
+    ],
     // eslint: {
     //     formatter: require('eslint-friendly-formatter'),
     // },
