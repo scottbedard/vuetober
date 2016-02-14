@@ -3,6 +3,11 @@ var path = require('path')
 module.exports = {
     entry: {
         app: './src/main.js',
+        vendors: [
+            'vue',
+            'vue-resource',
+            'vue-router',
+        ],
     },
     output: {
         path: path.resolve(__dirname, '../dist'),
