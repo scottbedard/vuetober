@@ -4,11 +4,11 @@ var webpack = require('webpack');
 module.exports = {
     entry: {
         app: './src/main.js',
-        // vendors: [
-        //     'vue',
-        //     'vue-resource',
-        //     'vue-router',
-        // ],
+        vendors: [
+            'vue',
+            'vue-resource',
+            'vue-router',
+        ],
     },
     output: {
         path: path.resolve(__dirname, '../dist'),
@@ -58,7 +58,7 @@ module.exports = {
         },
     },
     plugins: [
-        // new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js', Infinity),
+        new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js'),
     ],
     // eslint: {
     //     formatter: require('eslint-friendly-formatter'),

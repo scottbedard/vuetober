@@ -30,13 +30,11 @@ browserSync({
         webpackHotMiddleware(bundler)
     ],
     rewriteRules: [
-      {
-        match: /<link href="(.*)app\.(.*)\.css" rel="stylesheet">/ig,
-        fn: function(match) { return '<link href="/app.css" rel="stylesheet">' }
-      },
-      {
-        match: /<script src="(.*)app\.(.*)\.js"><\/script>/ig,
-        fn: function(match) { return '<script src="/app.js"></script>' }
-      },
+        {
+            match: /<script src="(.*)app\.(.*)\.js"><\/script>/ig,
+            fn: function(match) {
+                return '<script src="/vendor.js"></script><script src="/app.js"></script>';
+            }
+        },
     ],
 })

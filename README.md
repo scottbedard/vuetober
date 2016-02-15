@@ -36,3 +36,7 @@ Routing and redirecting is pretty straight forward, just register a Vue componen
 ```
 
 For more information on routing, check out the [official documentation](http://vuejs.github.io/vue-router/en/index.html).
+
+### Splitting dependencies
+
+By default, Vue's dependencies and plugins will be split off into their own bundle. This allows us to modify the actual application without forcing users to re-download the dependencies. If your project is using other dependencies, it is recommended that you add them to the vendors bundle. To do this, simply add the dependency to `entry.vendors` in the [base webpack config](https://github.com/scottbedard/oc-vuetober-theme/blob/master/template/build/webpack.base.conf.js).
