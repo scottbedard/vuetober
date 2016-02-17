@@ -11,8 +11,8 @@ module.exports = {
         ],
     },
     output: {
-        path: path.resolve(__dirname, '../dist'),
-        publicPath: '/themes/{{ name }}/dist/',
+        path: path.resolve(__dirname, '../assets'),
+        publicPath: '/themes/{{ name }}/assets/',
         filename: '[name].js',
     },
     resolve: {

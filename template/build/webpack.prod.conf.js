@@ -4,7 +4,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 // naming output files with hashes for better caching.
-// dist/index.html will be auto-generated with correct URLs.
+// assets/index.html will be auto-generated with correct URLs.
 config.output.filename = '[name].[chunkhash].js'
 config.output.chunkFilename = '[id].[chunkhash].js'
 
@@ -51,7 +51,7 @@ config.plugins = (config.plugins || []).concat([
     // extract css into its own file
     new ExtractTextPlugin('[name].[contenthash].css'),
 
-    // generate dist index.html with correct asset hash for caching
+    // generate assets index.html with correct asset hash for caching
     new HtmlWebpackPlugin({
         filename: './../pages/theme.htm',
         template: 'src/theme.htm',
