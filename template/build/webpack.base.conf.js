@@ -26,7 +26,10 @@ module.exports = {
         root: path.join(__dirname, 'node_modules'),
     },
     sassLoader: {
-        includePaths: [ path.resolve(__dirname, '../src/scss') ],
+        includePaths: [
+            path.resolve(__dirname, '../src/scss'),
+            path.resolve(__dirname, '../node_modules'),
+        ],
     },
     module: {
         loaders: [
