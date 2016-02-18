@@ -16,10 +16,11 @@ module.exports = {
         filename: '[name].js',
     },
     resolve: {
+        root: path.resolve(__dirname, '../src'),
         extensions: ['', '.js', '.vue'],
         alias: {
             'src': path.resolve(__dirname, '../src'),
-        }
+        },
     },
     resolveLoader: {
         root: path.join(__dirname, 'node_modules'),
