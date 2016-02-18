@@ -1,18 +1,19 @@
 <style lang="sass">
-@import './../style';
+    @import './../style';
 </style>
-
 <style lang="sass" scoped>
-header {
-    text-align: center;
-}
+    img {
+        max-height: 120px;
+        padding: 10px;
+        width: auto;
+    }
 </style>
 
 <template>
     <div>
         <header>
-            <img src="./../assets/october.png">
             <img src="./../assets/vue.png">
+            <img src="./../assets/october.png">
             <h1>oc-vuetober-theme</h1>
             <v-nav></v-nav>
         </header>
@@ -21,9 +22,9 @@ header {
 </template>
 
 <script>
-export default {
-    components: {
-        'v-nav': require('./../components/nav'),
-    },
-}
+    export default {
+        components: {
+            'v-nav': require('components/nav'),
+        },
+    }
 </script>
