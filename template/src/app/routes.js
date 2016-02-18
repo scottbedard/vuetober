@@ -39,12 +39,12 @@ module.exports = {
         },
 
         //
-        // Sandbox
+        // 404
         //
-        '/sandbox': {
-            name: 'sandbox',
-            title: 'Sandbox',
-            component: require('./../pages/sandbox'),
+        '*': {
+            name: '404',
+            title: '404',
+            component: require('./../pages/404'),
         },
     },
 };

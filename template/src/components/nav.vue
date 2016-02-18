@@ -20,9 +20,7 @@
         <ul>
             <li><a v-link="{ name: 'intro' }">Introduction</a></li>
             <li><a v-link="{ name: 'blog' }">Blog example</a></li>
-            <li><a href="https://github.com/scottbedard/oc-vuetober-theme">Git repo</a></li>
+            <li><a href="https://github.com/scottbedard/oc-vuetober-theme">Github</a></li>
         </ul>
     </nav>
 </template>
-
-<!-- If your component is simple enough, you don't need to provide a script block! -->

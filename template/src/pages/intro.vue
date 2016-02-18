@@ -1,3 +1,5 @@
+<!-- Don't need style tags? No problem, they aren't required. -->
+
 <template>
     <div class="intro page">
         <p>
@@ -5,3 +7,5 @@
         </p>
     </div>
 </template>
+
+<!-- And even cooler, the script tags aren't required either! -->
