@@ -1,4 +1,5 @@
 import Vue from 'vue';
+import Moment from 'moment';
 
 /**
  * Moment.js - http://momentjs.com/docs/#/displaying/
@@ -6,6 +7,4 @@ import Vue from 'vue';
  * @param  {String} format
  * @return {String}
  */
-import Moment from 'moment';
 Vue.filter('moment', (value, format) => Moment(value).format(format));
-
