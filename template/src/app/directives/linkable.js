@@ -23,12 +23,9 @@ Vue.directive('linkable', {
      * @return {void}
      */
     onClicked(e) {
-        if (e.target.tagName === 'A') {
-            let path = e.target.getAttribute('href');
-            if (path.charAt(0) === '/') {
-                e.preventDefault();
-                this.vm.$router.go({ path });
-            }
+        if (e.target.tagName === 'A' && e.target.hostname === window.location.hostname) {
+            e.preventDefault();
+            this.vm.$router.go({ path: e.target.pathname });
         }
     },
 
