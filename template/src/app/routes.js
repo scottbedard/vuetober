@@ -15,13 +15,14 @@ module.exports = {
      * @type {Object}
      */
     routes: {
+
         //
         // Intro
         //
         '/intro': {
             name: 'intro',
             title: 'Introduction',
-            component: require('./../pages/intro'),
+            component: require('pages/intro'),
         },
 
         //
@@ -30,12 +31,12 @@ module.exports = {
         '/blog': {
             name: 'blog',
             title: 'Communicating with October',
-            component: require('./../pages/blog/index'),
+            component: require('pages/blog/index'),
         },
 
         '/blog/:slug': {
             name: 'blog-post',
-            component: require('./../pages/blog/post'),
+            component: require('pages/blog/post'),
         },
 
         //
@@ -44,7 +45,7 @@ module.exports = {
         '*': {
             name: '404',
             title: '404',
-            component: require('./../pages/404'),
+            component: require('pages/404'),
         },
     },
 };

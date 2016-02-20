@@ -24,7 +24,7 @@
 </template>
 
 <script>
-    import Blog from './../../resources/blog';
+    import Blog from 'resources/blog';
 
     module.exports = {
 

@@ -1,9 +1,9 @@
 //
-// Boot directives
+// Directives
 //
 require('./directives/linkable');
 
 //
-// Boot filters
+// Filters
 //
 require('./filters/moment');
