@@ -5,6 +5,7 @@ module.exports = {
     entry: {
         app: './src/main.js',
         vendors: [
+            'moment',
             'vue',
             'vue-resource',
             'vue-router',
