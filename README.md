@@ -27,9 +27,9 @@ Thanks to hot-reloading, when a source file is changed the DOM will re-render an
 npm run build
 ```
 
-### Routing & dynamic content linking
+### Routing & linking from dynamic content
 
-Routing is pretty straight forward, you may register components and redirects in `/src/app/routes.js`. Managing router events and configuration can be done from `/src/app/router.js`. For more information on routing, check out the [official documentation](http://vuejs.github.io/vue-router/en/index.html).
+Routing and redirecting is pretty straight forward, just register your component or path in `/src/app/routes.js`. Managing router events and configuration can be done from `/src/app/router.js`. For more information on routing, check out the [official documentation](http://vuejs.github.io/vue-router/en/index.html).
 
 If you're displaying dynamic content that might contain internal links, the `v-linkable` directive should be used to hijack their click events and keep the user within the SPA.
 
