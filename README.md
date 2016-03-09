@@ -21,7 +21,13 @@ The dev server can be fired up on `localhost:3000` with the following command.
 npm run dev
 ```
 
-Thanks to hot-reloading, when a source file is changed the DOM will re-render and our application will maintain state. When it's time to deploy, execute the following to build your production assets.
+The test suite can be executed with the following command.
+
+```bash
+npm run test
+```
+
+Finally, to build your production assets execute the following command.
 
 ```bash
 npm run build
