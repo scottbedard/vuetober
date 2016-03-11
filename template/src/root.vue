@@ -1,6 +1,9 @@
 <style lang="sass">
-    @import './../style';
+    @import 'elements/containers';
+    @import 'elements/ui';
+    @import 'transitions';
 </style>
+
 <style lang="sass" scoped>
     img {
         max-height: 120px;
@@ -12,8 +15,8 @@
 <template>
     <div>
         <header>
-            <img src="./../assets/vue.png">
-            <img src="./../assets/october.png">
+            <img src="./assets/vue.png">
+            <img src="./assets/october.png">
             <h1>oc-vuetober-theme</h1>
             <v-nav></v-nav>
         </header>
@@ -22,9 +25,11 @@
 </template>
 
 <script>
+    import NavComponent from 'components/nav';
+
     export default {
         components: {
-            'v-nav': require('components/nav'),
+            'v-nav': NavComponent,
         },
     }
 </script>

@@ -23,5 +23,5 @@ Router.afterEach(after);
 //
 // Go!
 //
-import Master from 'app/master';
-Router.start(Master, '#app');
+import Root from './root';
+Router.start(Root, '#app');

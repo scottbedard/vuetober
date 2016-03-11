@@ -30,7 +30,7 @@
              * @return {Promise}
              */
             data(transition) {
-                return Blog.get(this.$route.params).then(response => this.$set('post', response.data));
+                return Blog.get().then(response => this.$set('post', response.data));
             },
         },
 
