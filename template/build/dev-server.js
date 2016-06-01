@@ -19,6 +19,9 @@ var bundler = webpack(webpackConfig)
  */
 browserSync({
     proxy: "{{ proxy }}",
+    // Stop the browser from automatically opening
+    open: false,
+    
     middleware: [
         webpackDevMiddleware(bundler, {
             publicPath: webpackConfig.output.publicPath,
