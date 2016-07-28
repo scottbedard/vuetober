@@ -1,50 +1,53 @@
-<p align="center">
-    <a href="//github.com/vuejs/vue" target="_blank"><img src="http://vuejs.org/images/logo.png" width="auto" height="105px"><a href="//github.com/octobercms/october" target="_blank"><img src="https://raw.githubusercontent.com/octobercms/october/master/themes/demo/assets/images/october.png" alt="October" width="auto" height="100px" /></a></a>
-</p>
-# oc-vuetober-theme
+# vue-webpack-boilerplate
 
-This project is an opinionated approach to SPAs within the wonderful worlds of [October CMS](https://github.com/octobercms/october), [Vue.js](https://github.com/vuejs/vue), and [Webpack](https://github.com/webpack/webpack). To see what's included out of the box, check out the [live demo](http://vuetober.scottbedard.net).
+> A full-featured Webpack setup with hot-reload, lint-on-save, unit testing & css extraction.
 
-### Getting started
+## Documentation
 
-Before we begin, you'll need to have [vue-cli](https://github.com/vuejs/vue-cli) installed. Once that's taken care of, execute the following from your `/themes` directory to create a new Vuetober project.
+Common topics are discussed in the [docs](http://vuejs-templates.github.io/webpack). Make sure to read it!
 
-```bash
-vue init scottbedard/oc-vuetober-theme my-theme
-cd my-theme
-npm install
+## Usage
+
+This is a project template for [vue-cli](https://github.com/vuejs/vue-cli). **It is recommended to use npm 3+ for a more efficient dependency tree.**
+
+``` bash
+$ npm install -g vue-cli
+$ vue init webpack my-project
+$ cd my-project
+$ npm install
+$ npm run dev
 ```
 
-The dev server can be fired up on `localhost:3000` with the following command.
+## What's Included
 
-```bash
-npm run dev
+- `npm run dev`: first-in-class development experience.
+  - Webpack + `vue-loader` for single file Vue components.
+  - State preserving hot-reload
+  - State preserving compilation error overlay
+  - Lint-on-save with ESLint
+  - Source maps
+
+- `npm run build`: Production ready build.
+  - JavaScript minified with [UglifyJS](https://github.com/mishoo/UglifyJS2).
+  - HTML minified with [html-minifier](https://github.com/kangax/html-minifier).
+  - CSS across all components extracted into a single file and minified with [cssnano](https://github.com/ben-eb/cssnano).
+  - All static assets compiled with version hashes for efficient long-term caching, and a production `index.html` is auto-generated with proper URLs to these generated assets.
+
+- `npm run unit`: Unit tests run in PhantomJS with [Karma](http://karma-runner.github.io/0.13/index.html) + [Mocha](http://mochajs.org/) + [karma-webpack](https://github.com/webpack/karma-webpack).
+  - Supports ES2015 in test files.
+  - Supports all webpack loaders.
+  - Easy mock injection.
+
+- `npm run e2e`: End-to-end tests with [Nightwatch](http://nightwatchjs.org/).
+  - Run tests in multiple browsers in parallel.
+  - Works with one command out of the box:
+    - Selenium and chromedriver dependencies automatically handled.
+    - Automatically spawns the Selenium server.
+
+### Fork It And Make Your Own
+
+You can fork this repo to create your own boilerplate, and use it with `vue-cli`:
+
+``` bash
+vue init username/repo my-project
 ```
-
-The test suite can be executed with the following command.
-
-```bash
-npm run test
-```
-
-Finally, to build your production assets execute the following command.
-
-```bash
-npm run build
-```
-
-### Routing & linking from dynamic content
-
-Routing and redirecting is pretty straight forward, just register your component or path in `/src/app/routes.js`. Managing router events and configuration can be done from `/src/app/router.js`. For more information on routing, check out the [official documentation](http://vuejs.github.io/vue-router/en/index.html).
-
-If you're displaying dynamic content that might contain internal links, the `v-linkable` directive should be used to hijack their click events and keep the user within the SPA.
-
-```html
-<p v-linkable>
-    {{{ blogPost }}}
-</p>
-```
-
-### Splitting dependencies
-
-By default, Vue's dependencies and plugins will be split off into their own bundle. This allows us to modify the actual application without forcing users to re-download the dependencies. If your project is using other dependencies, it is recommended that you add them to the vendors bundle. To do this, simply add the dependency to `entry.vendors` in the [base webpack config](https://github.com/scottbedard/oc-vuetober-theme/blob/master/template/build/webpack.base.conf.js).
