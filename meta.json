@@ -15,6 +15,11 @@
       "type": "string",
       "message": "Author"
     },
+    "proxy": {
+      "type": "string",
+      "required": true,
+      "default": "http://vuetober.october.dev"
+    },
     "lint": {
       "type": "confirm",
       "message": "Use ESLint to lint your code?"
