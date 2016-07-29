@@ -2,6 +2,7 @@ var path = require('path')
 var express = require('express')
 var webpack = require('webpack')
 var config = require('../config')
+var browserSync = require('browser-sync')
 var proxyMiddleware = require('http-proxy-middleware')
 var webpackConfig = process.env.NODE_ENV === 'testing'
   ? require('./webpack.prod.conf')
@@ -45,16 +46,33 @@ Object.keys(proxyTable).forEach(function (context) {
 // handle fallback for HTML5 history API
 app.use(require('connect-history-api-fallback')())
 
-// serve webpack bundle output
-app.use(devMiddleware)
-
-// enable hot-reload and state-preserving
-// compilation error display
-app.use(hotMiddleware)
-
 // serve pure static assets
 var staticPath = path.posix.join(config.dev.assetsPublicPath, config.dev.assetsSubDirectory)
 app.use(staticPath, express.static('./static'))
+
+// browser sync
+browserSync({
+    proxy: "{{ proxy }}",
+    open: false,
+    middleware: [
+      devMiddleware,
+      hotMiddleware,
+    ],
+    rewriteRules: [
+        {
+            match: /<link href=\"(.*)\" rel=\"stylesheet\">/ig,
+            fn: function(match) {
+                return '';
+            }
+        },
+        {
+            match: /<\/app><script(.*)\>\<\/script><\/body>/ig,
+            fn: function(match) {
+              return '</app><script src="/app.js"></script></body>';
+            },
+        },
+    ],
+})
 
 module.exports = app.listen(port, function (err) {
   if (err) {
