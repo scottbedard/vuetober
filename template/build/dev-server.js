@@ -60,7 +60,7 @@ browserSync({
     ],
     rewriteRules: [
         {
-            match: /<link href=\"(.*)\" rel=\"stylesheet\">/ig,
+            match: /<link(.*){{ name }}\/assets(.*?)>/ig,
             fn: function(match) {
                 return '';
             }
@@ -79,5 +79,5 @@ module.exports = app.listen(port, function (err) {
     console.log(err)
     return
   }
-  console.log('Listening at http://localhost:' + port + '\n')
+  console.log('Listening at http://localhost:3000' + '\n')
 })
