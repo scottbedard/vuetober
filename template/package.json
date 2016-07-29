@@ -47,7 +47,7 @@
     {{/lint}}
     "eventsource-polyfill": "^0.9.6",
     "express": "^4.13.3",
-    "extract-text-webpack-plugin": "^1.0.1",
+    "extract-text-webpack-plugin": "^2.0.0-beta",
     "file-loader": "^0.8.4",
     "function-bind": "^1.0.2",
     "html-webpack-plugin": "^2.8.1",
@@ -78,7 +78,7 @@
     "vue-html-loader": "^1.0.0",
     "vue-loader": "^9.2.2",
     "vue-style-loader": "^1.0.0",
-    "webpack": "^1.12.2",
+    "webpack": "^2.1.0-beta.20",
     "webpack-dev-middleware": "^1.4.0",
     "webpack-hot-middleware": "^2.6.0",
     "webpack-merge": "^0.8.3"
