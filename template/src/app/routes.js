@@ -1,7 +1,7 @@
 import StandardLayout from 'src/layouts/standard'
 import SplashLayout from 'src/layouts/splash'
-import HomePage from 'pages/home'
-import BarPage from 'pages/bar'
+import WelcomePage from 'pages/welcome'
+import AlternateLayoutPage from 'pages/alternate_layout'
 
 module.exports = [
 
@@ -12,14 +12,14 @@ module.exports = [
     path: '',
     component: SplashLayout,
     children: [
-      { path: '/welcome', component: HomePage }
+      { path: '/welcome', component: WelcomePage }
     ]
   },
   {
     path: '',
     component: StandardLayout,
     children: [
-      { path: '/bar', component: BarPage }
+      { path: '/alternate-layout', component: AlternateLayoutPage }
     ]
   },
 

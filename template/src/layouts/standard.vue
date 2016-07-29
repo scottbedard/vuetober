@@ -1,6 +1,11 @@
+<style lang="scss">
+    .v-standard {
+        padding: 20px;
+    }
+</style>
+
 <template>
-    <div>
-        <h1>Standard layout</h1>
+    <div class="v-standard">
         <router-view></router-view>
     </div>
 </template>
