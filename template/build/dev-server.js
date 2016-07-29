@@ -66,9 +66,9 @@ browserSync({
             }
         },
         {
-            match: /<\/app><script(.*)\>\<\/script><\/body>/ig,
+            match: /<div id=\"app\"><\/div>(.*)<\/body>/ig,
             fn: function(match) {
-              return '</app><script src="/app.js"></script></body>';
+              return '<div id="app"></div><script src="/app.js"></script></body>';
             },
         },
     ],
