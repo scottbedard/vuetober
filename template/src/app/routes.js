@@ -1,9 +1,30 @@
+import StandardLayout from 'src/layouts/standard'
+import SplashLayout from 'src/layouts/splash'
 import HomePage from 'pages/home'
-import FooPage from 'pages/foo'
 import BarPage from 'pages/bar'
 
 module.exports = [
-  { path: '/', component: HomePage },
-  { path: '/foo', component: FooPage },
-  { path: '/bar', component: BarPage }
+
+  //
+  // Routes
+  //
+  {
+    path: '',
+    component: SplashLayout,
+    children: [
+      { path: '/welcome', component: HomePage }
+    ]
+  },
+  {
+    path: '',
+    component: StandardLayout,
+    children: [
+      { path: '/bar', component: BarPage }
+    ]
+  },
+
+  //
+  // Redirects
+  //
+  { path: '/', redirect: '/welcome' }
 ]
