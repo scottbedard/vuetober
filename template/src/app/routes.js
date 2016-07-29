@@ -1,15 +1,5 @@
-export default {
-  redirects: {
-    '/': '/foo'
-  },
-  routes: {
-    '/foo': {
-      name: 'foo',
-      component: require('../pages/foo')
-    },
-    '/bar': {
-      name: 'bar',
-      component: require('../pages/bar')
-    }
-  }
-}
+module.exports = [
+  { path: '/', component: require('src/pages/home') },
+  { path: '/foo', component: require('src/pages/foo') },
+  { path: '/bar', component: require('src/pages/bar') }
+]
