@@ -11,8 +11,9 @@ Vue.use({
     let promises = []
     Object.keys(resources).forEach(key => {
       let promise = resources[key]
-      promise.then(response => {
-        this[key] = JSON.parse(response.data)
+      promise.then(({ data, body }) => {
+        // @todo: figure out why data is a string on the dev server
+        this[key] = typeof data === 'object' ? data : JSON.parse(body)
       })
       promises.push(promise)
     })
