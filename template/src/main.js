@@ -1,16 +1,26 @@
-import Vue from 'vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-import VueRouter from 'vue-router'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-import Root from './root'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+import Vue from 'vue'
+import VueRouter from 'vue-router'
 
 //
-// Router
+// Bootstrap global Vue utilities
+//
+require('./app/boot')
+
+//
+// Set up the router
 //
 Vue.use(VueRouter)
+
 const router = new VueRouter({
   mode: 'history',
   base: __dirname,
   routes: require('./app/routes')
 })
+
+//
+// Start the application
+//
+import Root from './root'
 
 /* eslint-disable no-new */
 new Vue({

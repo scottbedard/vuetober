@@ -1,0 +1,4 @@
+//
+// Plugins
+//
+require('./plugins/resources')

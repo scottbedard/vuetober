@@ -1,7 +1,9 @@
 import StandardLayout from 'src/layouts/standard'
 import SplashLayout from 'src/layouts/splash'
+
 import WelcomePage from 'pages/welcome'
 import AlternateLayoutPage from 'pages/alternate_layout'
+import BlogIndexPage from 'pages/blog/index'
 
 module.exports = [
 
@@ -19,7 +21,8 @@ module.exports = [
     path: '',
     component: StandardLayout,
     children: [
-      { path: '/alternate-layout', component: AlternateLayoutPage }
+      { path: '/alternate-layout', component: AlternateLayoutPage },
+      { path: '/blog', component: BlogIndexPage }
     ]
   },
 
