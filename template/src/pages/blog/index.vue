@@ -26,7 +26,7 @@
   module.exports = {
     data () {
       return {
-        posts: null,
+        posts: null
       }
     },
     created () {
