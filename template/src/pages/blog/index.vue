@@ -12,7 +12,9 @@
         <div v-else>
             <ul v-if="posts.length > 0">
                 <li v-for="post in posts">
-                    <router-link :to="{ name: 'blog/show', params: { slug: post.slug }}">{{ post.title }}</router-link>
+                    <router-link :to="{ name: 'blog/show', params: { slug: post.slug }}">
+                      \{{ post.title }}
+                    </router-link>
                 </li>
             </ul>
             <h4 v-else>There are no blog posts to display.</h4>

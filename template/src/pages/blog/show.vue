@@ -1,7 +1,7 @@
 <template>
     <div>
-      <h1>{{ post.title }}</h1>
-      <div v-html="post.content_html"></div>
+      <h1>\{{ post.title }}</h1>
+      <div v-html="post.content_html" v-linkable></div>
     </div>
 </template>
 
