@@ -2,6 +2,11 @@
 /* eslint-disable no-extend-native */
 Function.prototype.bind = require('function-bind')
 
+// use the vue-router plugin
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+Vue.use(VueRouter)
+
 // require all test files (files that ends with .spec.js)
 var testsContext = require.context('./specs', true, /\.spec$/)
 testsContext.keys().forEach(testsContext)

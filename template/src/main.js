@@ -4,6 +4,11 @@ import RootComponent from './root'
 import routes from './app/routes'
 
 //
+// Configure Vue utilities and plugins
+//
+require('./app/boot')
+
+//
 // Configure the router
 //
 Vue.use(VueRouter)
