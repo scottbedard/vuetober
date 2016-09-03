@@ -1,11 +1,10 @@
 //
 // Dependencies
 //
+@import 'core';
 @import 'normalize.scss/normalize.scss';
 
 //
 // Elements
 //
-@import 'elements/anchors';
-@import 'elements/html_body';
-@import 'elements/paragraphs';
+@import './elements/html_body';

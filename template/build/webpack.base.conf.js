@@ -17,11 +17,8 @@ module.exports = {
     fallback: [path.join(__dirname, '../node_modules')],
     alias: {
       'src': path.resolve(__dirname, '../src'),
-      'app': path.resolve(__dirname, '../src/app'),
       'assets': path.resolve(__dirname, '../src/assets'),
-      'components': path.resolve(__dirname, '../src/components'),
-      'pages': path.resolve(__dirname, '../src/pages'),
-      'resources': path.resolve(__dirname, '../src/resources')
+      'components': path.resolve(__dirname, '../src/components')
     }
   },
   resolveLoader: {
@@ -66,10 +63,6 @@ module.exports = {
         loader: 'json'
       },
       {
-        test: /\.html$/,
-        loader: 'vue-html'
-      },
-      {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url',
         query: {
@@ -93,6 +86,11 @@ module.exports = {
   },
   {{/lint}}
   vue: {
-    loaders: utils.cssLoaders()
+    loaders: utils.cssLoaders(),
+    postcss: [
+      require('autoprefixer')({
+        browsers: ['last 2 versions']
+      })
+    ]
   }
 }
