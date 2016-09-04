@@ -1,24 +1,26 @@
-import Vue from 'vue'
+import Vue from 'vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
 Vue.directive('linkable', {
-  bind (el, binding, vnode) {
-    let component = vnode.context
+  bind{{#if_eq lintConfig "standard"}} {{/if_eq}}(el, binding, vnode) {
+    const component = vnode.context{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
+{{#if_eq lintConfig "airbnb"}}    /* eslint-disable no-param-reassign */
+{{/if_eq}}
     el.linkableClick = (e) => {
-      for (let clickedElement of e.path) {
+      for (const clickedElement of e.path) {
         if (clickedElement === el || clickedElement.tagName === 'A') {
           if (clickedElement.hostname === window.location.hostname) {
-            e.preventDefault()
-            component.$router.push(clickedElement.pathname)
+            e.preventDefault(){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+            component.$router.push(clickedElement.pathname){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
           }
-          break
+          break{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
         }
       }
-    }
+    }{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
-    el.addEventListener('click', el.linkableClick)
+    el.addEventListener('click', el.linkableClick){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
   },
-  unbind (el) {
-    el.removeEventListener('click', el.linkableClick)
-  }
-})
+  unbind{{#if_eq lintConfig "standard"}} {{/if_eq}}(el) {
+    el.removeEventListener('click', el.linkableClick){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+  }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
+}){{#if_eq lintConfig "airbnb"}};{{/if_eq}}

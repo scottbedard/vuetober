@@ -11,7 +11,7 @@
     "test": "karma start test/unit/karma.conf.js --single-run"{{#lint}},{{/lint}}
     {{/unit}}
     {{#lint}}
-    "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"{{/lint}}
+    "lint": "eslint --fix --ext .js,.vue src test/unit/specs test/e2e/specs"{{/lint}}
   },
   "dependencies": {
     "babel-runtime": "^6.0.0",

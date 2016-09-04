@@ -3,9 +3,7 @@
 Function.prototype.bind = require('function-bind')
 
 // use the vue-router plugin
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-Vue.use(VueRouter)
+require('src/app/boot')
 
 // require all test files (files that ends with .spec.js)
 var testsContext = require.context('./specs', true, /\.spec$/)

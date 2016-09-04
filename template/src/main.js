@@ -1,23 +1,21 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import RootComponent from './root'
-import routes from './app/routes'
+import Vue from 'vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+import VueRouter from 'vue-router'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+import RootComponent from './root'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+import routes from './app/routes'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
 //
 // Configure Vue utilities and plugins
 //
-require('./app/boot')
+require('./app/boot'){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
 //
 // Configure the router
 //
-Vue.use(VueRouter)
-
 const router = new VueRouter({
   base: __dirname,
   mode: 'history',
-  routes
-})
+  routes{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
+}){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
 //
 // Launch the application
@@ -26,5 +24,5 @@ const router = new VueRouter({
 new Vue({
   router,
   el: '#app',
-  render: h => h(RootComponent)
-})
+  render: h => h(RootComponent){{#if_eq lintConfig "airbnb"}},{{/if_eq}}
+}){{#if_eq lintConfig "airbnb"}};{{/if_eq}}

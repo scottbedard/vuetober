@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import WelcomeComponent from 'src/pages/welcome'
 
-describe('Hello.vue', () => {
+describe('welcome.vue', () => {
   it('should render correct welcome content', () => {
     const vm = new Vue({
       el: document.createElement('div'),

@@ -34,25 +34,25 @@
 </template>
 
 <script>
-    import BlogResource from 'src/resources/blog'
+    import BlogResource from 'src/resources/blog'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
     export default {
-      data () {
+      data{{#if_eq lintConfig "standard"}} {{/if_eq}}() {
         return {
-          posts: []
-        }
+          posts: []{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
+        }{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
       },
-      created () {
-        this.fetchData()
+      created{{#if_eq lintConfig "standard"}} {{/if_eq}}() {
+        this.fetchData(){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
       },
       watch: {
-        '$route': 'fetchData'
+        {{#if_eq lintConfig "standard"}}'{{/if_eq}}$route{{#if_eq lintConfig "standard"}}'{{/if_eq}}: 'fetchData'{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
       },
       methods: {
-        fetchData () {
-          const posts = BlogResource.getPosts()
-          this.$resources({ posts })
-        }
-      }
-    }
+        fetchData{{#if_eq lintConfig "standard"}} {{/if_eq}}() {
+          const posts = BlogResource.getPosts(){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+          this.$resources({ posts }){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+        }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
+      }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
+    }{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 </script>
