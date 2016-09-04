@@ -1,55 +1,49 @@
-# vue-webpack-boilerplate
 
-> A full-featured Webpack setup with hot-reload, lint-on-save, unit testing & css extraction.
+<center>
+    <h1>oc-vuetober-theme</h1>
+    <p>An opinionated approach to single page applications with Vue and October CMS.</p>
+    <p>To see what's included out of the box, check out the <a href="http://vuetober.scottbedard.net">live demo</a>.</p>
+    <a href="//github.com/vuejs/vue" target="_blank"><img src="http://vuejs.org/images/logo.png" width="auto" height="105px"><a href="//github.com/octobercms/october" target="_blank"></a>
+    <a href="//github.com/octobercms/october"><img src="https://raw.githubusercontent.com/octobercms/october/master/themes/demo/assets/images/october.png" alt="October" width="auto" height="100px" /></a>
+</center>
 
-> This template is Vue 2.0 compatible. For Vue 1.x use this command: `vue init webpack#1.0 my-project`
+<a name="getting-started"></a>
+### Getting started
 
-## Documentation
+Before getting started, make sure you have [vue-cli](https://github.com/vuejs/vue-cli) installed. Once that is taken care of, run the following command from your `/themes` directory.
 
-Common topics are discussed in the [docs](http://vuejs-templates.github.io/webpack). Make sure to read it!
-
-## Usage
-
-This is a project template for [vue-cli](https://github.com/vuejs/vue-cli). **It is recommended to use npm 3+ for a more efficient dependency tree.**
-
-``` bash
-$ npm install -g vue-cli
-$ vue init webpack my-project
-$ cd my-project
+```bash
+$ vue init scottbedard/oc-vuetober-theme myawesometheme
+$ cd myawesometheme
 $ npm install
+```
+
+To build your site for production, run the following command.
+
+```bash
+$ npm run build
+```
+
+The development server can be fired up at `localhost:3000` by running the following.
+
+```bash
 $ npm run dev
 ```
 
-## What's Included
+And finally, executing the test suite can be done with the following command.
 
-- `npm run dev`: first-in-class development experience.
-  - Webpack + `vue-loader` for single file Vue components.
-  - State preserving hot-reload
-  - State preserving compilation error overlay
-  - Lint-on-save with ESLint
-  - Source maps
-
-- `npm run build`: Production ready build.
-  - JavaScript minified with [UglifyJS](https://github.com/mishoo/UglifyJS2).
-  - HTML minified with [html-minifier](https://github.com/kangax/html-minifier).
-  - CSS across all components extracted into a single file and minified with [cssnano](https://github.com/ben-eb/cssnano).
-  - All static assets compiled with version hashes for efficient long-term caching, and a production `index.html` is auto-generated with proper URLs to these generated assets.
-
-- `npm run unit`: Unit tests run in PhantomJS with [Karma](http://karma-runner.github.io/0.13/index.html) + [Mocha](http://mochajs.org/) + [karma-webpack](https://github.com/webpack/karma-webpack).
-  - Supports ES2015 in test files.
-  - Supports all webpack loaders.
-  - Easy mock injection.
-
-- `npm run e2e`: End-to-end tests with [Nightwatch](http://nightwatchjs.org/).
-  - Run tests in multiple browsers in parallel.
-  - Works with one command out of the box:
-    - Selenium and chromedriver dependencies automatically handled.
-    - Automatically spawns the Selenium server.
-
-### Fork It And Make Your Own
-
-You can fork this repo to create your own boilerplate, and use it with `vue-cli`:
-
-``` bash
-vue init username/repo my-project
+```bash
+npm test
 ```
+
+<a name="resources"></a>
+### External resources
+
+This theme uses quite a few underlying tools. If you've never used some of these before, it is highly recommended that you familiarize yourself with them by giving their docs the once over.
+
+- [Karma](https://karma-runner.github.io/1.0/index.html)
+- [Vue](http://vuejs.org/guide)
+- [Vue Loader](http://vue-loader.vuejs.org)
+- [Vue Resource](https://github.com/vuejs/vue-resource)
+- [Vue Router](http://router.vuejs.org)
+- [Webpack](https://webpack.github.io)
