@@ -6,18 +6,16 @@
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
-    "build": "node build/build.js",
-    {{#unit}}
-    "test": "karma start test/unit/karma.conf.js --single-run"{{#lint}},{{/lint}}
-    {{/unit}}
-    {{#lint}}
-    "lint": "eslint --fix --ext .js,.vue src test/unit/specs test/e2e/specs"{{/lint}}
+    {{#unit}}"test": "karma start test/unit/karma.conf.js --single-run",
+    {{/unit}}{{#lint}}"lint": "eslint --fix --ext .js,.vue src test/unit/specs test/e2e/specs",
+    {{/lint}}"build": "node build/build.js"
   },
   "dependencies": {
     "babel-runtime": "^6.0.0",
     "vue": "^2.0.0-rc.4",
     "vue-resource": "^0.9.3",
-    "vue-router": "^2.0.0-rc.4"
+    "vue-router": "^2.0.0-rc.4",
+    "vuex": "^1.0.0-rc.2"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",
