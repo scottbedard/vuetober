@@ -5,11 +5,12 @@
   "author": "scott@scottbedard.net",
   "private": true,
   "scripts": {
-    "dev": "node build/dev-server.js",
     "build": "node build/build.js",
-    "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
+    "dev": "node build/dev-server.js",
+    "lint": "eslint --ext .js,.vue src test/unit/specs --fix",
+    "setup": "node build/setup.js",
     "test": "npm run unit",
-    "lint": "eslint --ext .js,.vue src test/unit/specs --fix"
+    "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run"
   },
   "dependencies": {
     "vue": "^2.1.10",
@@ -62,6 +63,7 @@
     "opn": "^4.0.2",
     "ora": "^1.1.0",
     "phantomjs-prebuilt": "^2.1.14",
+    "prompt": "^1.0.0",
     "semver": "^5.3.0",
     "shelljs": "^0.7.6",
     "sinon": "^1.17.7",

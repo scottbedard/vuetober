@@ -72,9 +72,7 @@ app.use(staticPath, express.static('./static'));
 
 // browser sync
 browserSync({
-    proxy: {
-        target: "http://vuetober.october.dev",
-    },
+    proxy: 'http://vuetober.october.dev',
     open: false,
     middleware: [
         devMiddleware,
