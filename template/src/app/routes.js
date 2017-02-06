@@ -9,6 +9,7 @@ import StandardLayout from 'src/layouts/standard'{{#if_eq lintConfig "airbnb"}};
 //
 import BlogListPage from 'src/pages/blog/list'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 import BlogShowPage from 'src/pages/blog/show'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+import NotFoundPage from 'src/pages/404'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 import WelcomePage from 'src/pages/welcome'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
 //
@@ -20,7 +21,8 @@ export default [
     path: '',
     component: SplashLayout,
     children: [
-      { path: '/welcome', component: WelcomePage }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
+      { path: '/welcome', component: WelcomePage },
+      { path: '*', component: NotFoundPage }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
     ]{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
   },
 

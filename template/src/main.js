@@ -12,9 +12,9 @@ require('./app/boot'){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 // Configure the router
 //
 const router = new VueRouter({
-  base: __dirname,
-  mode: 'history',
-  routes{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
+    base: __dirname,
+    mode: 'history',
+    routes{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
 }){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
 //
@@ -22,7 +22,7 @@ const router = new VueRouter({
 //
 /* eslint-disable no-new */
 new Vue({
-  router,
-  el: '#app',
-  render: h => h(RootComponent){{#if_eq lintConfig "airbnb"}},{{/if_eq}}
+    router,
+    el: '#app',
+    render: h => h(RootComponent){{#if_eq lintConfig "airbnb"}},{{/if_eq}}
 }){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
