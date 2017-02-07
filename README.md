@@ -1,27 +1,33 @@
 # oc-vuetober-theme
 
-> An opinionated approach to single page applications within the wonderful worlds of Vue.js, October CMS, and Laravel.
+This project is an opinionated approach to single page applications within the wonderful worlds of [Vue.js](https://vuejs.org), [October CMS](https://octobercms.com), and [Laravel](https://laravel.com). To see what's included out of the box, check out the [live demo](http://vuetober.scottbedard.net).
 
-## Build Setup
+<a name="getting-started"></a>
+### Getting started
 
-``` bash
+In order to use this theme, you'll need to have a fair understanding of [Vue.js](https://vuejs.org). If you've never used this framework before, you can get the fundamentals down through [this free screencast series](http://vuecasts.com/).
+
+To install a Vuetober theme, run the following commands from your `/themes` directory.
+
+> **Note:** As of version 2.1, pulling in `vue-cli` is no longer neccessary.
+
+```bash
+# clone down the repository and cd into it
+git clone https://github.com/scottbedard/oc-vuetober-theme.git mytheme
+cd mytheme
+
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
+# build your entry point
 npm run build
 
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run all tests
-npm test
+# set up the theme and dev environment
+npm run setup
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+To run unit tests, execute the following command.
+
+```bash
+npm test
+```
