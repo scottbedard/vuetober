@@ -90,10 +90,11 @@ module.exports = {
     plugins: [
         new webpack.LoaderOptionsPlugin({
             options: {
+                context: '/',
                 sassLoader: {
                     includePaths: [
-                        path.resolve(__dirname, '../scss'),
-                        path.resolve(__dirname, '../node_modules'),
+                        resolve('scss'),
+                        resolve('node_modules'),
                     ],
                 },
             },
