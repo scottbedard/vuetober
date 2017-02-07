@@ -18,7 +18,6 @@ module.exports = {
         autoOpenBrowser: true,
         cssSourceMap: false,
         env: require('./dev.env'),
-        port: 8080,
         proxyTable: {},
     },
 };

@@ -16,7 +16,7 @@ var webpackConfig = process.env.NODE_ENV === 'testing'
     : require('./webpack.dev.conf');
 
 // default port where dev server listens for incoming traffic
-var port = process.env.PORT || config.dev.port;
+var port = process.env.PORT;
 
 // automatically open browser, if not set will be false
 var autoOpenBrowser = !!config.dev.autoOpenBrowser;
@@ -94,7 +94,7 @@ browserSync({
     ],
 });
 
-var uri = 'http://localhost:' + port;
+var uri = 'http://localhost:3000';
 
 devMiddleware.waitUntilValid(function () {
     console.log('> Listening at ' + uri + '\n');
