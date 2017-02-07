@@ -1,6 +1,5 @@
-<style lang="scss">
-    @import '../scss/global'; // @todo: remove relative pathing when scss directory is included
-</style>
+<!-- Pull in our global style sheet -->
+<style lang="scss" src="global"></style>
 
 <template>
     <div id="app">

@@ -87,4 +87,16 @@ module.exports = {
             },
         ],
     },
+    plugins: [
+        new webpack.LoaderOptionsPlugin({
+            options: {
+                sassLoader: {
+                    includePaths: [
+                        path.resolve(__dirname, '../scss'),
+                        path.resolve(__dirname, '../node_modules'),
+                    ],
+                },
+            },
+        }),
+    ],
 };
