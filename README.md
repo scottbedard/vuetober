@@ -31,3 +31,22 @@ To run unit tests, execute the following command.
 ```bash
 npm test
 ```
+
+<a name="features"></a>
+### Features
+
+**Single file components**
+
+Vue is a fantastic framework, and when using `.vue` files we have a great foundation for creating small, composable components. With this setup, we're able to write our code using any pre-processors we like, and take advantage of things like [hot reloading](https://vue-loader.vuejs.org/en/features/hot-reload.html) and [scoped css](https://vue-loader.vuejs.org/en/features/scoped-css.html).
+
+**State of the art tooling**
+
+This theme takes full advantage of [Webpack 2](https://webpack.js.org). The build script will optimize your application with techniques like automatically inlining small images, tree shaking, and more. In addition to this, [ESLint](http://eslint.org/docs/rules) will automatically fix your javascript to ensure a consistent style throughout your codebase.
+
+**Modern Javascript**
+
+From arrow functions to JSX, you're free to use the latest and greatest Javascript. Your code will be compiled by Babel into something that every browser can understand.
+
+**Unit testing**
+
+Every aspect of this theme is unit testable, with great tooling set up to help you deliver rock solid code. This includes the ability to easily render components in tests, mock dependencies, and even spy on functions. In addition to this, code coverage reporting is already configured, which means it's trivially easy to integrate with a service like [CodeCov](https://codecov.io)s.
