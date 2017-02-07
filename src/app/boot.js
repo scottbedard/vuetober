@@ -1,4 +1,11 @@
+import axios from 'axios';
 import Vue from 'vue';
+
+//
+// Configure our HTTP client
+//
+let token = document.querySelector('meta[name=token]').getAttribute('content');
+axios.defaults.headers.common['X-CSRF-TOKEN'] = token;
 
 //
 // Plugins
