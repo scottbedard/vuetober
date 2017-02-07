@@ -41,6 +41,7 @@ module.exports = {
                 enforce: "pre",
                 include: [resolve('src'), resolve('test')],
                 options: {
+                    fix: true,
                     formatter: eslintFriendlyFormatter,
                 },
             },
