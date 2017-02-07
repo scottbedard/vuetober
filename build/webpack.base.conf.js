@@ -1,8 +1,9 @@
-var path = require('path');
-var utils = require('./utils');
 var config = require('../config');
 var eslintFriendlyFormatter = require('eslint-friendly-formatter');
 var isProduction = process.env.NODE_ENV === 'production';
+var path = require('path');
+var utils = require('./utils');
+var webpack = require('webpack');
 
 function resolve (dir) {
     return path.join(__dirname, '..', dir);
@@ -20,9 +21,10 @@ module.exports = {
             : config.dev.assetsPublicPath,
     },
     resolve: {
-        extensions: ['.js', '.vue', '.json'],
+        extensions: ['.js', '.vue', '.json', '.scss'],
         modules: [
             resolve('src'),
+            resolve('scss'),
             resolve('node_modules'),
         ],
         alias: {

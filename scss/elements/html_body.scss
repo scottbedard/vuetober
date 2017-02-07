@@ -1,0 +1,15 @@
+html {
+    box-sizing: border-box;
+    height: 100%;
+
+    *,
+    *:before,
+    *:after {
+        box-sizing: inherit;
+    }
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    min-height: 100%;
+}

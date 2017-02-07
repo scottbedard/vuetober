@@ -1,12 +1,8 @@
 import Vue from 'vue';
-import App from './App';
-import router from './router';
-
-console.log ('HELLO');
+import RootComponent from './root';
 
 /* eslint-disable no-new */
 new Vue({
+    render: h => h(RootComponent),
     el: '#app',
-    router,
-    render: h => h(App),
 });

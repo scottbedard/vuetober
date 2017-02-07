@@ -1,0 +1,14 @@
+// This file should reference all of our global styles
+// that output css. It should be included only from
+// root component from a non-scoped style block.
+
+//
+// Dependencies
+//
+@import './core';
+@import '~normalize.scss/normalize.scss'; // @todo: remove tilde when node_modules is included in paths
+
+//
+// Elements
+//
+@import './elements/html_body';
