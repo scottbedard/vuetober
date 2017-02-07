@@ -1,8 +1,21 @@
 import Vue from 'vue';
-import RootComponent from './root';
+import VueRouter from 'vue-router';
 
-/* eslint-disable no-new */
+// set up our global plugins and utilities
+require('./app/boot');
+
+// set up the router
+import routes from './app/routes';
+
+const router = new VueRouter({
+    base: __dirname,
+    mode: 'history',
+    routes,
+});
+
+// instantiate our application and mount it to the dom
 new Vue({
-    render: h => h(RootComponent),
+    render: h => h(require('./root')),
     el: '#app',
+    router,
 });
