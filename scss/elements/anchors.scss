@@ -1,0 +1,8 @@
+a {
+    color: $vue-green;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

@@ -14,6 +14,7 @@ const router = new VueRouter({
 });
 
 // instantiate our application and mount it to the dom
+/* eslint-disable no-new */
 new Vue({
     render: h => h(require('./root')),
     el: '#app',
