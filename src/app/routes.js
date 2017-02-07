@@ -4,4 +4,9 @@ export default [
         path: '/',
         component: require('src/pages/home/home'),
     },
+    {
+        name: 'videos',
+        path: '/videos',
+        component: require('src/pages/videos/videos'),
+    },
 ];
