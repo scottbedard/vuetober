@@ -49,4 +49,4 @@ From arrow functions to JSX, you're free to use the latest and greatest Javascri
 
 **Unit testing**
 
-Every aspect of this theme is unit testable, with great tooling set up to help you deliver rock solid code. This includes the ability to easily render components in tests, mock dependencies, and even spy on functions. In addition to this, code coverage reporting is already configured, which means it's trivially easy to integrate with a service like [CodeCov](https://codecov.io)s.
+Every aspect of this theme is unit testable, with great tooling set up to help you deliver rock solid code. This includes the ability to easily render components in tests, mock dependencies, and even spy on functions. In addition to this, code coverage reporting is already configured, which means it's trivially easy to integrate with a service like [CodeCov](https://codecov.io).
