@@ -13,23 +13,27 @@ To install a Vuetober theme, run the following commands from your `/themes` dire
 
 ```bash
 # clone down the repository and cd into it
-git clone https://github.com/scottbedard/oc-vuetober-theme.git mytheme
-cd mytheme
+$ git clone https://github.com/scottbedard/oc-vuetober-theme.git mytheme
+$ cd mytheme
 
 # install dependencies
-npm install
+$ npm install
 
-# build your entry point
-npm run build
-
-# set up the theme and dev environment
-npm run setup
+# run setup command
+$ npm run setup
 ```
 
-To run unit tests, execute the following command.
+Other available commands
 
 ```bash
-npm test
+# compile production assets
+$ npm run build
+
+# start development server
+$ npm run dev
+
+# run unit tests
+$ npm test
 ```
 
 <a name="features"></a>
@@ -45,7 +49,7 @@ This theme takes full advantage of [Webpack 2](https://webpack.js.org). The buil
 
 **Modern Javascript**
 
-From arrow functions to JSX, you're free to use the latest and greatest Javascript. Your code will be compiled by Babel into something that every browser can understand.
+You're free to use the latest and greatest Javascript and [JSX](https://github.com/vuejs/babel-plugin-transform-vue-jsx). Your code will be compiled by Babel into something that every browser can understand.
 
 **Unit testing**
 
