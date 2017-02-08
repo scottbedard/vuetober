@@ -14,11 +14,18 @@
         display: block;
         padding: 12px 0;
     }
+
+    p {
+        font-size: 24px;
+        font-weight: 300;
+        strong { font-weight: 400 }
+    }
 </style>
 
 <template>
     <div class="videos-page">
         <h1>Videos</h1>
+        <p><strong>Note:</strong> These videos have not been created yet.</p>
         <a href="#" @click.prevent>Getting started &amp; creating pages</a>
         <a href="#" @click.prevent>Creating global components</a>
         <a href="#" @click.prevent>Communicating with the backend</a>
