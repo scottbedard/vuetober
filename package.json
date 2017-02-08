@@ -33,7 +33,6 @@
     "browser-sync": "^2.18.7",
     "chai": "^3.5.0",
     "chalk": "^1.1.3",
-    "colors": "^1.1.2",
     "compression-webpack-plugin": "^0.3.2",
     "connect-history-api-fallback": "^1.3.0",
     "cross-env": "^3.1.4",

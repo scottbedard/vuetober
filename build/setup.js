@@ -1,6 +1,6 @@
 'use strict';
 
-const colors = require("colors/safe");
+const chalk = require('chalk');
 const fs = require('fs');
 const path = require('path');
 const prompt = require('prompt');
@@ -12,25 +12,25 @@ const schema = {
     properties: {
         name: {
             default: themeDirectory,
-            description: colors.gray('  Name'),
+            description: chalk.gray('  Name'),
             required: true,
         },
         description: {
-            description: colors.gray('  Description'),
+            description: chalk.gray('  Description'),
             required: false,
         },
         author: {
-            description: colors.gray('  Author'),
+            description: chalk.gray('  Author'),
             required: false,
         },
         url: {
-            description: colors.gray('  Development url'),
+            description: chalk.gray('  Development url'),
             required: true,
         },
         cleanup: {
             before: value => Boolean(value.match(/^[Yy](.*)/)),
             default: 'y',
-            description: colors.gray('  Remove setup command (y/n)'),
+            description: chalk.gray('  Remove setup command (y/n)'),
             message: 'Answer must be yes or no',
             pattern: /^[YyNn](.*)*/,
             required: true,
@@ -53,7 +53,7 @@ if (isVuetoberRepository) {
     schema.properties.cleanupGit = {
         before: value => Boolean(value.match(/^[Yy](.*)/)),
         default: 'y',
-        description: colors.gray('  Remove git repository (y/n)'),
+        description: chalk.gray('  Remove git repository (y/n)'),
         pattern: /^[YyNn](.*)*/,
         required: true,
     };
@@ -62,7 +62,7 @@ if (isVuetoberRepository) {
 //
 // start the setup prompt
 //
-console.log (colors.white('  Setup a new Vuetober theme'));
+console.log (chalk.white('  Setup a new Vuetober theme'));
 console.log ();
 
 prompt.message = false;
@@ -75,7 +75,7 @@ prompt.get(schema, function (err, result) {
     if (err) {
         console.log ();
         console.log ();
-        console.log (colors.red('  Setup canceled'));
+        console.log (chalk.red('  Setup canceled'));
         return;
     }
 
@@ -116,5 +116,5 @@ prompt.get(schema, function (err, result) {
     }
 
     console.log ();
-    console.log(colors.green('  Vuetober set up complete, go build something amazing!'));
+    console.log(chalk.green('  Vuetober set up complete, go build something amazing!'));
 });
