@@ -1,6 +1,7 @@
 'use strict';
 
 var chalk = require('chalk');
+var exec = require('child_process').exec;
 var fs = require('fs');
 var path = require('path');
 var prompt = require('prompt');
@@ -119,10 +120,16 @@ prompt.get(schema, function (err, result) {
         rimraf.sync(path.resolve(__dirname, '../.git'));
     }
 
-    console.log ();
-    console.log (chalk.green('  Vuetober set up complete, time to build something amazing!'));
-    console.log ();
-    console.log (chalk.gray('  You\'ll need to run the following command before viewing your theme in the browser.'));
-    console.log ();
-    console.log (chalk.gray('  $ npm run build'));
+    // instruct october to use our new theme
+    var cmd = 'php artisan theme:use ' + themeDirectory + ' --force';
+    exec(cmd, { cwd: path.resolve('../../') }, function(error, stdout, stderr) {
+
+        // show the success message
+        console.log ();
+        console.log (chalk.green('  Vuetober set up complete, time to build something amazing!'));
+        console.log ();
+        console.log (chalk.gray('  You\'ll need to run the following command before viewing your theme in the browser.'));
+        console.log ();
+        console.log (chalk.gray('  $ npm run build'));
+    });
 });
