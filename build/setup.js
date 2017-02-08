@@ -1,35 +1,43 @@
+'use strict';
+
+var colors = require("colors/safe");
 var fs = require('fs');
 var path = require('path');
 var prompt = require('prompt');
 
 prompt.message = false;
 
-var themeDirectory = path.basename(path.resolve(__dirname, '..'));
+const themeDirectory = path.basename(path.resolve(__dirname, '..'));
 
-var schema = {
+console.log (colors.white('  Setup a new Vuetober theme'));
+console.log ();
+
+const schema = {
     properties: {
         name: {
             default: themeDirectory,
-            description: 'Theme name',
+            description: colors.gray('  Name'),
             required: true,
         },
         description: {
-            description: 'Theme description',
+            description: colors.gray('  Description'),
             required: false,
         },
         author: {
-            description: 'Theme author',
+            description: colors.gray('  Author'),
             required: false,
         },
         url: {
-            description: 'Development url',
+            description: colors.gray('  Development url'),
             required: true,
         },
         cleanup: {
-            default: true,
-            description: 'Remove setup command',
+            before: value => Boolean(value.match(/^[Yy](.*)/)),
+            default: 'y',
+            description: colors.gray('  Remove setup command (y/n)'),
+            message: 'Answer must be yes or no',
+            pattern: /^[YyNn](.*)*/,
             required: true,
-            type: 'boolean',
         },
     },
 };
@@ -37,10 +45,18 @@ var schema = {
 prompt.start();
 
 prompt.get(schema, function (err, result) {
+    if (err) {
+        console.log ();
+        console.log ();
+        console.log (colors.red('  Setup canceled'));
+        return;
+    }
+
     // create our theme.yaml file
-    var theme = 'name: \'' + result.name + '\'\n' +
-        'description: \'' + result.description + '\'\n' +
-        'author: \'' + result.author + '\'';
+    const theme =
+        `name: '${ result.name }'
+        description: '${ result.description }'
+        author: '${ result.author }'`;
 
     fs.writeFileSync(path.resolve(__dirname, '../theme.yaml'), theme);
 
@@ -60,4 +76,7 @@ prompt.get(schema, function (err, result) {
         fs.writeFileSync(path.resolve(__dirname, '../package.json'), packageJson);
         fs.unlink(setupPath);
     }
+
+    console.log ();
+    console.log(colors.green('  Vuetober set up complete, go build something amazing!'));
 });
