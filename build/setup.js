@@ -95,10 +95,10 @@ prompt.get(schema, function (err, result) {
     fs.writeFileSync(path.resolve(__dirname, './dev-server.js'), devServer);
 
     // update the asset path to use the correct directory
-    const configIndex = fs.readFileSync(path.resolve(__dirname, '../config/index.js'))
+    const configIndex = fs.readFileSync(path.resolve(__dirname, '../config/index.js'), 'utf8')
         .replace(/oc-vuetober-theme/g, themeDirectory);
 
-    fs.writeFileSync(path.resolve(__dirname, '../config/index.js'));
+    fs.writeFileSync(path.resolve(__dirname, '../config/index.js'), configIndex);
 
     // remove the setup command
     if (result.cleanup) {
