@@ -68,6 +68,7 @@
     "ora": "^1.1.0",
     "phantomjs-prebuilt": "^2.1.14",
     "prompt": "^1.0.0",
+    "rimraf": "^2.5.4",
     "sass-loader": "^4.1.1",
     "semver": "^5.3.0",
     "shelljs": "^0.7.6",
