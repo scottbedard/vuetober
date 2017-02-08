@@ -9,8 +9,8 @@ var themeDirectory = path.basename(path.resolve(__dirname, '..'));
 var schema = {
     properties: {
         name: {
-            description: 'Theme name',
             default: themeDirectory,
+            description: 'Theme name',
             required: true,
         },
         description: {
@@ -24,6 +24,12 @@ var schema = {
         url: {
             description: 'Development url',
             required: true,
+        },
+        cleanup: {
+            default: true,
+            description: 'Remove setup command',
+            required: true,
+            type: 'boolean',
         },
     },
 };
@@ -44,4 +50,14 @@ prompt.get(schema, function (err, result) {
         .replace(/http:\/\/vuetober\.october\.dev/g, result.url);
 
     fs.writeFileSync(path.resolve(__dirname, './dev-server.js'), devServer);
+
+    // remove the setup command once we're done setting up
+    if (result.cleanup) {
+        var setupPath = path.resolve(__dirname, 'setup.js');
+        var packageJson = fs.readFileSync(path.resolve(__dirname, '../package.json'), 'utf8')
+            .replace('"setup": "node build/setup.js",\n    ', '');
+
+        fs.writeFileSync(path.resolve(__dirname, '../package.json'), packageJson);
+        fs.unlink(setupPath);
+    }
 });
