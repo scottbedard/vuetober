@@ -116,5 +116,9 @@ prompt.get(schema, function (err, result) {
     }
 
     console.log ();
-    console.log(chalk.green('  Vuetober set up complete, go build something amazing!'));
+    console.log (chalk.green('  Vuetober set up complete, time to build something amazing!'));
+    console.log ();
+    console.log (chalk.gray('  You\'ll need to run the following command before viewing your theme in the browser.'));
+    console.log ();
+    console.log (chalk.gray('  $ npm run build'));
 });
