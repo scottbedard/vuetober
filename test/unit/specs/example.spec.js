@@ -13,7 +13,7 @@ describe('src/pages/home/home.vue', () => {
         // define it. In tests, make sure it is abstract.
         const MockRouter = new VueRouter({
             abstract: true,
-            routes: [{ name: 'videos', path: '/videos', }],
+            routes: [{ name: 'videos', path: '/videos', },],
         });
 
         // Inside of our test environment, we have access

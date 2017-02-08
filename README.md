@@ -9,8 +9,6 @@ In order to use this theme, you'll need to have a fair understanding of [Vue.js]
 
 To install a Vuetober theme, run the following commands from your `/themes` directory.
 
-> **Note:** As of version 2.1, pulling in `vue-cli` is no longer neccessary.
-
 ```bash
 # clone down the repository and cd into it
 $ git clone https://github.com/scottbedard/oc-vuetober-theme.git mytheme
@@ -22,6 +20,8 @@ $ npm install
 # run setup command
 $ npm run setup
 ```
+
+> **Note:** As of version 2.1, pulling in `vue-cli` is no longer neccessary.
 
 Other available commands
 
