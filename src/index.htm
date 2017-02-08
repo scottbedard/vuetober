@@ -1,0 +1,29 @@
+<!-- htmlmin:ignore -->title = "Index"
+url = "/:all?*"
+is_hidden = 0
+==
+function onStart()
+{
+    $this['token'] = \Session::token();
+}
+==
+<!-- htmlmin:ignore -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta name="token" content="{{ token }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Resources -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+
+        <!-- Title -->
+        <title>oc-vuetober-theme</title>
+    </head>
+    <body>
+        <div id="app"></div>
+        <!-- built files will be auto injected -->
+    </body>
+</html>

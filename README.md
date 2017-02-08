@@ -1,7 +1,3 @@
-<p align="center">
-    <a href="//github.com/vuejs/vue" target="_blank"><img src="http://vuejs.org/images/logo.png" width="auto" height="105px"><a href="//github.com/octobercms/october" target="_blank"><img src="https://raw.githubusercontent.com/octobercms/october/master/themes/demo/assets/images/october.png" alt="October" width="auto" height="100px" /></a></a>
-</p>
-
 # oc-vuetober-theme
 
 This project is an opinionated approach to single page applications within the wonderful worlds of [Vue.js](https://vuejs.org), [October CMS](https://octobercms.com), and [Laravel](https://laravel.com). To see what's included out of the box, check out the [live demo](http://vuetober.scottbedard.net).
@@ -9,60 +5,52 @@ This project is an opinionated approach to single page applications within the w
 <a name="getting-started"></a>
 ### Getting started
 
-Before getting started, make sure you have both [NPM](https://www.npmjs.com) and [vue-cli](https://github.com/vuejs/vue-cli) installed. Once that is taken care of, run the following command from your `/themes` directory.
+In order to use this theme, you'll need to have a fair understanding of [Vue.js](https://vuejs.org). If you've never used this framework before, you can get the fundamentals down through [this free screencast series](http://vuecasts.com/).
+
+To install a Vuetober theme, run the following commands from your `/themes` directory.
+
+> **Note:** As of version 2.1, pulling in `vue-cli` is no longer neccessary.
 
 ```bash
-$ vue init scottbedard/oc-vuetober-theme myawesometheme
-$ cd myawesometheme
+# clone down the repository and cd into it
+$ git clone https://github.com/scottbedard/oc-vuetober-theme.git mytheme
+$ cd mytheme
+
+# install dependencies
 $ npm install
+
+# run setup command
+$ npm run setup
 ```
 
-To build your site for production, run the following command.
+Other available commands
 
 ```bash
+# compile production assets
 $ npm run build
-```
 
-The development server can be fired up at `localhost:3000` by running the following.
-
-```bash
+# start development server
 $ npm run dev
-```
 
-For a better development experience, make sure to install the [Vue devtools](https://github.com/vuejs/vue-devtools) Chrome extension.
-
-<a name="routing"></a>
-### Routing
-
-Routes can be registered from the `app/routes.js` file. Simply import your component, and assign it to a route.
-
-The layout components exist to provide an easy way of creating multiple site structures. To use a given layout for your page, make sure to register its route as a child route of the layout component.
-
-When displaying dynamic content that may contain local links, it is recommended that you attach the `v-linkable` directive to the container. This will hijack click events and keep your user within the SPA. Without doing this, a full page reload will occur.
-
-```html
-<div v-html="blogPost" v-linkable></div>
-```
-
-<a name="unit-testing"></a>
-### Unit testing and continuous integration
-
-This theme comes ready to go with unit testing and code coverage reporting. To run the test suite, execute the following command.
-
-```bash
+# run unit tests
 $ npm test
 ```
 
-Most continuous integration services like [Travic CI](https://travis-ci.org) and [Circle CI](https://circleci.com) should be able to infer the test command. Also, this theme works seamlessly with coverage reporting such as [Coveralls](https://coveralls.io).
+<a name="features"></a>
+### Features
 
-<a name="resources"></a>
-### Resources
+**Single file components**
 
-This theme uses quite a few different tools. If you've never used some of these before, it is highly recommended that you familiarize yourself with them by giving their docs the once over.
+Vue is a fantastic framework, and when using `.vue` files we have a great foundation for creating small, composable components. With this setup, we're able to write our code using any pre-processors we like, and take advantage of things like [hot reloading](https://vue-loader.vuejs.org/en/features/hot-reload.html) and [scoped css](https://vue-loader.vuejs.org/en/features/scoped-css.html).
 
-- [Karma](https://karma-runner.github.io/1.0/index.html)
-- [Vue](http://vuejs.org/guide)
-- [Vue Loader](http://vue-loader.vuejs.org)
-- [Vue Resource](https://github.com/vuejs/vue-resource)
-- [Vue Router](http://router.vuejs.org)
-- [Webpack](https://webpack.github.io)
+**State of the art tooling**
+
+This theme takes full advantage of [Webpack 2](https://webpack.js.org). The build script will optimize your application with techniques like automatically inlining small images, tree shaking, and more. In addition to this, [ESLint](http://eslint.org/docs/rules) will automatically fix your javascript to ensure a consistent style throughout your codebase.
+
+**Modern Javascript**
+
+You're free to use the latest and greatest Javascript and [JSX](https://github.com/vuejs/babel-plugin-transform-vue-jsx). Your code will be compiled by Babel into something that every browser can understand.
+
+**Unit testing**
+
+Every aspect of this theme is unit testable, with great tooling set up to help you deliver rock solid code. This includes the ability to easily render components in tests, mock dependencies, and even spy on functions. In addition to this, code coverage reporting is already configured, which means it's trivially easy to integrate with a service like [CodeCov](https://codecov.io).
