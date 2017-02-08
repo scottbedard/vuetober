@@ -24,7 +24,7 @@ var schema = {
             required: false,
         },
         url: {
-            description: chalk.gray('  Development url'),
+            description: chalk.gray('  Application URL'),
             required: true,
         },
         cleanup: {
@@ -120,7 +120,7 @@ prompt.get(schema, function (err, result) {
     }
 
     console.log ();
-    console.log (chalk.green('  Vuetober set up compvare, time to build something amazing!'));
+    console.log (chalk.green('  Vuetober set up complete, time to build something amazing!'));
     console.log ();
     console.log (chalk.gray('  You\'ll need to run the following command before viewing your theme in the browser.'));
     console.log ();
