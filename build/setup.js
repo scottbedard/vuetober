@@ -1,9 +1,10 @@
 'use strict';
 
-var colors = require("colors/safe");
-var fs = require('fs');
-var path = require('path');
-var prompt = require('prompt');
+const colors = require("colors/safe");
+const fs = require('fs');
+const path = require('path');
+const prompt = require('prompt');
+const rimraf = require('rimraf');
 
 const themeDirectory = path.basename(path.resolve(__dirname, '..'));
 
@@ -80,9 +81,9 @@ prompt.get(schema, function (err, result) {
 
     // create our theme.yaml file
     const theme =
-        `name: '${ result.name }'
-        description: '${ result.description }'
-        author: '${ result.author }'`;
+        `name: '${ result.name }'\n` +
+        `description: '${ result.description }'\n` +
+        `author: '${ result.author }'`;
 
     fs.writeFileSync(path.resolve(__dirname, '../theme.yaml'), theme);
 
@@ -100,12 +101,12 @@ prompt.get(schema, function (err, result) {
             .replace('"setup": "node build/setup.js",\n    ', '');
 
         fs.writeFileSync(path.resolve(__dirname, '../package.json'), packageJson);
-        fs.unlink(setupPath);
+        rimraf.sync(setupPath);
     }
 
     // remove the old git repository
     if (result.cleanupGit) {
-        fs.unlink(path.resolve(__dirname, '../.git'));
+        rimraf.sync(path.resolve(__dirname, '../.git'));
     }
 
     console.log ();
