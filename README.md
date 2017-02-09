@@ -2,8 +2,8 @@
 
 This project is an opinionated approach to single page applications within the wonderful worlds of [Vue.js](https://vuejs.org), [October CMS](https://octobercms.com), and [Laravel](https://laravel.com). To see what's included out of the box, check out the [live demo](http://vuetober.scottbedard.net).
 
-<a name="getting-started"></a>
-### Getting started
+<a name="installation"></a>
+## Installation
 
 In order to use this theme, you'll need to have a fair understanding of [Vue.js](https://vuejs.org). If you've never used this framework before, you can get the fundamentals down through [this free screencast series](http://vuecasts.com/).
 
@@ -36,8 +36,13 @@ $ npm run dev
 $ npm test
 ```
 
+<a name="screencasts"></a>
+## Screen casts
+
+**Episode 1:** [Introduction to Vuetober](https://www.youtube.com/watch?v=IkjrU61CXq0)
+
 <a name="features"></a>
-### Features
+## Features
 
 **Single file components**
 
