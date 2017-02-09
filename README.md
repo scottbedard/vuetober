@@ -40,6 +40,7 @@ $ npm test
 ## Screen casts
 
 **Episode 1:** [Introduction to Vuetober](https://www.youtube.com/watch?v=IkjrU61CXq0)
+
 **Episode 2:** [Using the development server](https://www.youtube.com/watch?v=nv55CLfWBcQ)
 
 <a name="features"></a>
