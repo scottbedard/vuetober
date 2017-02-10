@@ -47,6 +47,8 @@ $ npm test
 
 **Episode 3:** [Registering global components](https://www.youtube.com/watch?v=-_KnTB5P2Zc)
 
+**Episode 4:** [Communicating witht the backend](https://www.youtube.com/watch?v=V8n2cSrTUyw)
+
 <a name="features"></a>
 ## Features
 
