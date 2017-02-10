@@ -20,5 +20,5 @@ require('./directives/linkable');
 //
 // Register global components
 //
-const components = require('src/components/global');
+import components from 'src/components/global';
 Object.keys(components).forEach(tag => Vue.component(tag, components[tag]));
