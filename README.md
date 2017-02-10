@@ -45,6 +45,8 @@ $ npm test
 
 **Episode 2:** [Using the development server](https://www.youtube.com/watch?v=nv55CLfWBcQ)
 
+**Episode 3:** [Registering global components](https://www.youtube.com/watch?v=-_KnTB5P2Zc)
+
 <a name="features"></a>
 ## Features
 
