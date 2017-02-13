@@ -1,11 +1,23 @@
 'use strict';
 
-var chalk = require('chalk');
-var exec = require('child_process').exec;
-var fs = require('fs');
-var path = require('path');
-var prompt = require('prompt');
-var rimraf = require('rimraf');
+//
+// check if node modules have been installed, and if
+// not give the user a some help installing them.
+//
+try {
+    var chalk = require('chalk');
+    var exec = require('child_process').exec;
+    var fs = require('fs');
+    var path = require('path');
+    var prompt = require('prompt');
+    var rimraf = require('rimraf');
+} catch(e) {
+    console.log('You must run the following command before setting up your theme.');
+    console.log();
+    console.log('$ npm install');
+
+    return;
+}
 
 var themeDirectory = path.basename(path.resolve(__dirname, '..'));
 
