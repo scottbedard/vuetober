@@ -12,7 +12,7 @@ module.exports = {
     ],
     root: true,
     rules: {
-        'comma-dangle': ['error', 'always'],
+        'comma-dangle': ['error', 'always-multiline'],
         'indent': ['error', 4],
         'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0, // allow debugger in development
         'quotes': ['error', 'single'],
