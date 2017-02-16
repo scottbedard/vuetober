@@ -2,6 +2,7 @@ var baseWebpackConfig = require('./webpack.base.conf');
 var config = require('../config');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 var merge = require('webpack-merge');
 var path = require('path');
 var utils = require('./utils');
@@ -26,9 +27,20 @@ var webpackConfig = merge(baseWebpackConfig, {
     plugins: [
         // http://vuejs.github.io/vue-loader/en/workflow/production.html
         new webpack.DefinePlugin({ 'process.env': env }),
+
+        // minify our javascript
         new webpack.optimize.UglifyJsPlugin({ compress: { warnings: false }}),
-        // extract css into its own file
+
+        // extract css into its own file and minify it
         new ExtractTextPlugin(utils.assetsPath('css/[name].[contenthash].css')),
+        new OptimizeCssAssetsPlugin({
+            assetNameRegExp: /\.css$/g,
+            canPrint: false,
+            cssProcessor: require('cssnano'),
+            cssProcessorOptions: { discardComments: { removeAll: true }},
+        }),
+
+        // minify our root .htm file and inject production assets
         new HtmlWebpackPlugin({
             chunksSortMode: 'dependency',
             filename: path.resolve(__dirname, '../pages/index.htm'),
@@ -41,6 +53,7 @@ var webpackConfig = merge(baseWebpackConfig, {
             },
             template: 'src/index.htm',
         }),
+
         // split vendor js into its own file
         new webpack.optimize.CommonsChunkPlugin({
             name: 'vendor',
@@ -51,12 +64,10 @@ var webpackConfig = merge(baseWebpackConfig, {
                     module.resource.indexOf(path.join(__dirname, '../node_modules')) === 0;
             },
         }),
+
         // extract webpack runtime and module manifest to its own file in order to
         // prevent vendor hash from being updated whenever app bundle is updated
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'manifest',
-            chunks: ['vendor'],
-        }),
+        new webpack.optimize.CommonsChunkPlugin({ name: 'manifest', chunks: ['vendor'] }),
     ],
 });
 
