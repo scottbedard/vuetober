@@ -1,6 +1,6 @@
 {
   "name": "oc-vuetober-theme",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "An opinionated approach to single page applications within the wonderful worlds of Vue.js, October CMS, and Laravel.",
   "author": "scott@scottbedard.net",
   "private": true,
@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "axios": "^0.15.3",
-    "vue": "^2.1.10",
+    "vue": "^2.2.0",
     "vue-router": "^2.2.0"
   },
   "devDependencies": {
@@ -75,9 +75,9 @@
     "sinon": "^1.17.7",
     "sinon-chai": "^2.8.0",
     "url-loader": "^0.5.7",
-    "vue-loader": "^10.3.0",
+    "vue-loader": "^11.0.0",
     "vue-style-loader": "^2.0.0",
-    "vue-template-compiler": "^2.1.10",
+    "vue-template-compiler": "^2.2.0",
     "webpack": "^2.2.1",
     "webpack-bundle-analyzer": "^2.2.1",
     "webpack-dev-middleware": "^1.10.0",
