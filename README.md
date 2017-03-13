@@ -4,6 +4,8 @@
 
 This project is an opinionated approach to single page applications within the wonderful worlds of [Vue.js](https://vuejs.org), [October CMS](https://octobercms.com), and [Laravel](https://laravel.com). To see what's included out of the box, check out the [live demo](http://vuetober.scottbedard.net).
 
+> **Note:** This theme uses Vue 2. For the older 1.x version, [click here](https://github.com/scottbedard/oc-vuetober-theme/tree/v1.0.0).
+
 <a name="installation"></a>
 ## Installation
 
