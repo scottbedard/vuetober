@@ -26,13 +26,7 @@ $ npm run setup
 
 # compile production assets
 $ npm run build
-```
 
-> **Note:** As of version 2.1, pulling in `vue-cli` is no longer neccessary.
-
-Other available commands
-
-```bash
 # start development server
 $ npm run dev
 
