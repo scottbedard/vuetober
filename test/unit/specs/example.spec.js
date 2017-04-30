@@ -13,14 +13,14 @@ describe('src/pages/home/home.vue', () => {
         // define it. In tests, make sure it is abstract.
         const MockRouter = new VueRouter({
             abstract: true,
-            routes: [{ name: 'videos', path: '/videos', },],
+            routes: [{ name: 'videos', path: '/videos' }],
         });
 
         // Inside of our test environment, we have access
         // to Vue's template compiler. This enables us
         // to render a test component in templates.
         const vm = new Vue({
-            components: { 'v-home-page': HomePageComponent, },
+            components: { 'v-home-page': HomePageComponent },
             el: document.createElement('div'),
             router: MockRouter,
             template: '<v-home-page></v-home-page>',
