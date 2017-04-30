@@ -4,8 +4,6 @@
 
 This project is an opinionated approach to single page applications within the wonderful worlds of [Vue.js](https://vuejs.org), [October CMS](https://octobercms.com), and [Laravel](https://laravel.com). To see what's included out of the box, check out the [live demo](http://vuetober.scottbedard.net).
 
-> **Note:** This theme uses Vue 2. For the older 1.x version, [click here](https://github.com/scottbedard/oc-vuetober-theme/tree/v1.0.0).
-
 <a name="installation"></a>
 ## Installation
 
@@ -19,20 +17,22 @@ $ git clone https://github.com/scottbedard/oc-vuetober-theme.git mytheme
 $ cd mytheme
 
 # install dependencies
-$ npm install
+$ yarn
 
 # run setup command
-$ npm run setup
+$ yarn run setup
 
 # compile production assets
-$ npm run build
+$ yarn run build
 
 # start development server
-$ npm run dev
+$ yarn run dev
 
 # run unit tests
-$ npm test
+$ yarn test
 ```
+
+> **Note:** This theme uses Yarn to manage it's dependencies. If you're unfamiliar with Yarn, [this screencast](https://laracasts.com/lessons/meet-yarn-your-new-package-manager) is a great place to start.
 
 <a name="screencasts"></a>
 ## Screen casts
