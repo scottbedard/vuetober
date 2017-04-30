@@ -25,14 +25,9 @@
 <template>
     <div class="videos-page">
         <h1>Videos</h1>
-        <p><strong>Note:</strong> These videos have not been created yet.</p>
-        <a href="#" @click.prevent>Getting started &amp; creating pages</a>
-        <a href="#" @click.prevent>Creating global components</a>
-        <a href="#" @click.prevent>Communicating with the backend</a>
-        <a href="#" @click.prevent>Customizing the build setup</a>
-        <a href="#" @click.prevent>The basics of unit testing</a>
-        <a href="#" @click.prevent>Continuous integration and code coverage</a>
-        <a href="#" @click.prevent>Bundle splitting</a>
-        <a href="#" @click.prevent>State management with Vuex</a>
+        <a href="https://www.youtube.com/watch?v=IkjrU61CXq0">Introduction to Vuetober</a>
+        <a href="https://www.youtube.com/watch?v=nv55CLfWBcQ">Using the development server</a>
+        <a href="https://www.youtube.com/watch?v=-_KnTB5P2Zc">Creating global components</a>
+        <a href="https://www.youtube.com/watch?v=V8n2cSrTUyw">Communicating with the backend</a>
     </div>
 </template>
