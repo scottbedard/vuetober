@@ -39,7 +39,10 @@ module.exports = {
                 test: /\.(js|vue)$/,
                 loader: 'eslint-loader',
                 enforce: "pre",
-                include: [resolve('src'), resolve('test')],
+                include: [
+                    resolve('src'), 
+                    resolve('test'),
+                ],
                 options: {
                     fix: true,
                     formatter: eslintFriendlyFormatter,
@@ -62,8 +65,11 @@ module.exports = {
             },
             {
                 test: /\.js$/,
-                loader: 'babel-loader',
-                include: [resolve('src'), resolve('test')],
+                loader: 'babel-loader?cacheDirectory=true',
+                include: [
+                    resolve('src'), 
+                    resolve('test'),
+                ],
             },
             {
                 test: /\.json$/,
