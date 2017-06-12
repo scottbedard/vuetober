@@ -5,6 +5,21 @@ Vue.directive('linkable', {
         const component = vnode.context;
 
         el.linkableClick = (e) => {
+            // internet explorer doesn't natively support click event
+            // paths, so we'll need to fake it by manually walking
+            // up the dom tree until we find our document body.
+            if (typeof e.path === 'undefined') {
+                const path = [];
+                let node = e.target;
+
+                while (node !== document.body) {
+                    path.push(node);
+                    node = node.parentNode;
+                }
+
+                e.path = path;
+            }
+            
             for (const clickedElement of e.path) {
                 if (clickedElement === el || clickedElement.tagName === 'A') {
                     if (clickedElement.hostname === window.location.hostname) {
