@@ -1,3 +1,4 @@
+import RootComponent from './root';
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
@@ -16,7 +17,7 @@ const router = new VueRouter({
 // instantiate our application and mount it to the dom
 /* eslint-disable no-new */
 new Vue({
-    render: h => h(require('./root')),
+    render: h => h(RootComponent),
     el: '#app',
     router,
 });

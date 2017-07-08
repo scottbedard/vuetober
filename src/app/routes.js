@@ -1,12 +1,15 @@
+import HomeComponent from 'src/pages/home/home';
+import VideosComponent from 'src/pages/videos/videos';
+
 export default [
     {
         name: 'home',
         path: '/',
-        component: require('src/pages/home/home'),
+        component: HomeComponent,
     },
     {
         name: 'videos',
         path: '/videos',
-        component: require('src/pages/videos/videos'),
+        component: VideosComponent,
     },
 ];
