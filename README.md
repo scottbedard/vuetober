@@ -10,9 +10,6 @@
     </a>
 </p>
 
-[![Build status](https://img.shields.io/circleci/project/github/scottbedard/oc-vuetober-theme.svg)]()
-[![Dependencies](https://img.shields.io/david/scottbedard/oc-vuetober-theme.svg)]()
-
 # oc-vuetober-theme
 
 This project is an opinionated approach to single page applications within the wonderful worlds of [Vue.js](https://vuejs.org), [October CMS](https://octobercms.com), and [Laravel](https://laravel.com). To see what's included out of the box, check out the [live demo](http://vuetober.scottbedard.net).
