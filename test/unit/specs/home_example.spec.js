@@ -1,32 +1,37 @@
+import HomeComponent from 'src/pages/home/home';
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import HomePageComponent from 'src/pages/home/home';
 
-// Use describe() to group similar tests together.
-describe('src/pages/home/home.vue', () => {
-
-    // Use it() to specify exactly what you're testing.
+describe('home page', () => {
     it('displays a welcome message', () => {
 
-        // Since our home page component uses the <router-link>
-        // component, we'll need to provide a mock router to
-        // define it. In tests, make sure it is abstract.
-        const MockRouter = new VueRouter({
+        // spin up a router instance
+        const router = new VueRouter({
             abstract: true,
             routes: [{ name: 'videos', path: '/videos' }],
         });
 
-        // Inside of our test environment, we have access
-        // to Vue's template compiler. This enables us
-        // to render a test component in templates.
+        // create a vue instance
         const vm = new Vue({
-            components: { 'v-home-page': HomePageComponent },
+
+            // define the component we're testing
+            components: {
+                'v-home-page': HomeComponent,
+            },
+
+            // mount to an in-memory dom element
             el: document.createElement('div'),
-            router: MockRouter,
-            template: '<v-home-page></v-home-page>',
+
+            // pass our router into the vm
+            router,
+
+            // use vue's template compiler to render our template
+            template: '<v-home-page />',
         });
 
-        // Finally, we can look at the component and make our assertion.
-        expect(vm.$el.querySelector('h1').textContent).to.equal('Welcome to your new Vuetober theme!');
+        // finally, make our assertion that the dom looks as we expect
+        expect(vm.$el.querySelector('h1').textContent).to.equal(
+            'Welcome to your new Vuetober theme!'
+        );
     });
 });
