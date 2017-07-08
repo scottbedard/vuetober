@@ -10,7 +10,8 @@
     "lint": "eslint --ext .js,.vue src test/unit/specs --fix",
     "setup": "node build/setup.js",
     "test": "npm run unit",
-    "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run"
+    "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
+    "unit-watch": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js"
   },
   "dependencies": {
     "axios": "^0.15.3",
