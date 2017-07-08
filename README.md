@@ -1,4 +1,17 @@
-![alt tag](http://i.imgur.com/Ia3H0Ae.png)
+<p align="center">
+    <img src="http://i.imgur.com/Ia3H0Ae.png" /><br />
+    <br />
+    <a href="https://circleci.com/gh/scottbedard/oc-vuetober-theme">
+        <img src="https://img.shields.io/circleci/project/github/scottbedard/oc-vuetober-theme.svg" />
+    </a>
+    <img src="https://img.shields.io/david/scottbedard/oc-vuetober-theme.svg" />
+    <a href="https://github.com/scottbedard/oc-vuetober-theme/blob/master/LICENSE.md">
+        <img src="https://img.shields.io/github/license/scottbedard/oc-vuetober-theme.svg" />
+    </a>
+</p>
+
+[![Build status](https://img.shields.io/circleci/project/github/scottbedard/oc-vuetober-theme.svg)]()
+[![Dependencies](https://img.shields.io/david/scottbedard/oc-vuetober-theme.svg)]()
 
 # oc-vuetober-theme
 
