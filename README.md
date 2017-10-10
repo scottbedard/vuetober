@@ -64,7 +64,7 @@ Vue is a fantastic framework, and when using `.vue` files we have a great founda
 
 **State of the art tooling**
 
-This theme takes full advantage of [Webpack 2](https://webpack.js.org). The build script will optimize your application with techniques like automatically inlining small images, tree shaking, and more. In addition to this, [ESLint](http://eslint.org/docs/rules) will automatically fix your javascript to ensure a consistent style throughout your codebase.
+This theme takes full advantage of [Webpack 3](https://webpack.js.org). The build script will optimize your application with techniques like automatically inlining small images, tree shaking, and more. In addition to this, [ESLint](http://eslint.org/docs/rules) will automatically fix your javascript to ensure a consistent style throughout your codebase.
 
 **Modern Javascript**
 
