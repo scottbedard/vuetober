@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="http://i.imgur.com/Ia3H0Ae.png" /><br />
+    <img height="50px" src="http://i.imgur.com/Ia3H0Ae.png" /><br />
     <br />
     <a href="https://circleci.com/gh/scottbedard/oc-vuetober-theme">
         <img src="https://img.shields.io/circleci/project/github/scottbedard/oc-vuetober-theme.svg" />
@@ -9,8 +9,6 @@
         <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT" />
     </a>
 </p>
-
-# oc-vuetober-theme
 
 This project is an opinionated approach to single page applications within the wonderful worlds of [Vue.js](https://vuejs.org), [October CMS](https://octobercms.com), and [Laravel](https://laravel.com). To see what's included out of the box, check out the [live demo](http://vuetober.scottbedard.net).
 
