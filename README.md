@@ -4,7 +4,9 @@
     <a href="https://circleci.com/gh/scottbedard/oc-vuetober-theme">
         <img src="https://img.shields.io/circleci/project/github/scottbedard/oc-vuetober-theme.svg" />
     </a>
-    <img src="https://img.shields.io/david/scottbedard/oc-vuetober-theme.svg" />
+    <a href="https://david-dm.org/scottbedard/oc-vuetober-theme">
+        <img src="https://img.shields.io/david/scottbedard/oc-vuetober-theme.svg" />
+    </a>
     <a href="https://github.com/scottbedard/oc-vuetober-theme/blob/master/LICENSE">
         <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT" />
     </a>
