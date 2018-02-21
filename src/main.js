@@ -1,9 +1,13 @@
 import RootComponent from './root';
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import axios from 'axios';
 
-// set up our global plugins and utilities
-require('./app/boot');
+// attach a csrf token to all of our xhr requests
+axios.defaults.headers.common['X-CSRF-TOKEN'] = document.querySelector('meta[name=token]').getAttribute('content');
+
+// boot up our components, directives, plugins, etc...
+import './app/boot';
 
 // set up the router
 import routes from './app/routes';
