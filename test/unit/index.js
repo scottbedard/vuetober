@@ -5,6 +5,10 @@ Function.prototype.bind = require('function-bind');
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
+// turn off a couple of devtool and production tips
+Vue.config.devtools = false;
+Vue.config.productionTip = false;
+
 Vue.use(VueRouter);
 
 // require all test files (files that ends with .spec.js)

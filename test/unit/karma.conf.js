@@ -6,11 +6,12 @@
 var webpackConfig = require('../../build/webpack.test.conf');
 
 module.exports = function (config) {
+    
+    // to run in additional browsers:
+    // 1. install corresponding karma launcher
+    //    http://karma-runner.github.io/0.13/config/browsers.html
+    // 2. add it to the `browsers` array below.
     config.set({
-        // to run in additional browsers:
-        // 1. install corresponding karma launcher
-        //    http://karma-runner.github.io/0.13/config/browsers.html
-        // 2. add it to the `browsers` array below.
         browsers: [
             'ChromeHeadless',
             // 'PhantomJS',
@@ -26,7 +27,7 @@ module.exports = function (config) {
             '../../node_modules/babel-polyfill/dist/polyfill.js',
             './index.js',
         ],
-        frameworks: ['mocha', 'sinon-chai'],
+        frameworks: ['mocha', 'chai-dom', 'sinon-chai'],
         preprocessors: {
             './index.js': ['webpack', 'sourcemap'],
         },
