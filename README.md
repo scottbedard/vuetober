@@ -2,7 +2,7 @@
     <img height="64px" src="http://i.imgur.com/Ia3H0Ae.png" /><br />
     <br />
     <a href="https://circleci.com/gh/scottbedard/oc-vuetober-theme">
-        <img src="https://img.shields.io/circleci/project/github/scottbedard/oc-vuetober-theme.svg" />
+        <img src="https://img.shields.io/circleci/project/github/scottbedard/oc-vuetober-theme/master.svg" />
     </a>
     <a href="https://david-dm.org/scottbedard/oc-vuetober-theme">
         <img src="https://img.shields.io/david/scottbedard/oc-vuetober-theme.svg" />
