@@ -1,5 +1,7 @@
+var path = require('path');
+
 module.exports = (api, options) => {
-    // save files to our theme's "assets" directory
+    // set webpack output to our themes "assets" directory
     options.outputDir = 'assets';
     
     // save catch-all route in the theme's "pages" directory
@@ -9,5 +11,10 @@ module.exports = (api, options) => {
             args[0].template = 'src/index.htm';
             return args;
         });
+    });
+
+    // configure the webpack public path
+    api.configureWebpack(config => {
+        config.output.publicPath = '/themes/' + path.basename(api.resolve('.')) + '/assets/';
     });
 }
