@@ -1,5 +1,5 @@
 {
-  "name": "vuetober",
+  "name": "vue-cli-plugin-vuetober",
   "version": "3.0.0-alpha.0",
   "description": "",
   "main": "index.js",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/scottbedard/oc-vuetober-theme/issues"
   },
-  "homepage": "https://github.com/scottbedard/oc-vuetober-theme#readme"
+  "homepage": "https://github.com/scottbedard/oc-vuetober-theme#readme",
+  "peerDependencies": {
+    "@vue/cli-shared-utils": "^3.0.0-rc.3"
+  }
 }
