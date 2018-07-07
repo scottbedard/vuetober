@@ -1,14 +1,14 @@
 module.exports = (api, projectOptions) => {
+    //
+    // modify webpack config
+    //
     api.chainWebpack(webpackConfig => {
-        // modify webpack config with webpack-chain
-    });
-  
-    api.configureWebpack(webpackConfig => {
-        // modify webpack config
-        // or return object to be merged with webpack-merge
-    });
-  
-    api.registerCommand('test', args => {
-        // register `vue-cli-service test`
+        
+        // save catch-all route in the theme's "pages" directory
+        webpackConfig.plugin('html').tap(args => {
+            args[0].filename = '../pages/index.htm';
+            args[0].template = 'src/index.htm';
+            return args;
+        });
     });
 }

@@ -13,7 +13,6 @@ module.exports = [
     // description
     //
     {
-        default: '',
         message: 'Description',
         name: 'description',
         type: 'input',
@@ -23,7 +22,6 @@ module.exports = [
     // author
     //
     {
-        default: '',
         message: 'Author',
         name: 'author',
         type: 'input',
