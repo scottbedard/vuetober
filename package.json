@@ -1,0 +1,19 @@
+{
+  "name": "vuetober",
+  "version": "3.0.0-alpha.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scottbedard/oc-vuetober-theme.git"
+  },
+  "author": "Scott Bedard",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/scottbedard/oc-vuetober-theme/issues"
+  },
+  "homepage": "https://github.com/scottbedard/oc-vuetober-theme#readme"
+}
