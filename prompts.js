@@ -4,7 +4,7 @@ var themeDir = path.resolve(__dirname).split('\\').slice(-1).pop();
 
 module.exports = [
     {
-        message: 'Server URL',
+        message: 'Application URL',
         name: 'server',
         type: 'input',
     },
