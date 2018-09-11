@@ -1,20 +1,20 @@
 var path = require('path');
 
 module.exports = (api, options) => {
-    // set webpack output to our themes "assets" directory
+    // set webpack's output directory to /assets
     options.outputDir = 'assets';
     
-    // save catch-all route in the theme's "pages" directory
+    // if in production, save our only page to /pages
     api.chainWebpack(config => {
-        config.plugin('html').tap(args => {
-            args[0].filename = '../pages/index.htm';
-            args[0].template = 'src/index.htm';
-            return args;
-        });
-    });
+        if (process.env.NODE_ENV === 'production') {
+            config.plugin('html').tap(function(args) {
+                Object.assign(args[0], {
+                    filename: '../pages/index.htm',
+                    template: 'src/index.htm',
+                });
 
-    // configure the webpack public path
-    api.configureWebpack(config => {
-        config.output.publicPath = '/themes/' + path.basename(api.resolve('.')) + '/assets/';
+                return args;
+            });
+        }
     });
 }
