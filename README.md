@@ -1,6 +1,9 @@
 <p align="center">
     <img height="64px" src="http://i.imgur.com/Ia3H0Ae.png" /><br />
     <br />
+    <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetober">
+        <img src="https://img.shields.io/npm/v/vue-cli-plugin-vuetober.svg" alt="NPM version" />
+    </a>
     <a href="https://github.com/scottbedard/oc-vuetober-theme/blob/master/LICENSE">
         <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT" />
     </a>
