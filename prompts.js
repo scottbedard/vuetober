@@ -1,26 +1,19 @@
+var path = require('path');
+
+var themeDir = path.resolve(__dirname).split('\\').slice(-1).pop();
+
 module.exports = [
-    //
-    // name
-    //
     {
-        default: 'Vuetober',
+        default: themeDir,
         message: 'Theme Name',
         name: 'name',
         type: 'input',
     },
-
-    //
-    // description
-    //
     {
         message: 'Description',
         name: 'description',
         type: 'input',
     },
-
-    //
-    // author
-    //
     {
         message: 'Author',
         name: 'author',
