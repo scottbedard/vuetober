@@ -1,15 +1,28 @@
 <!-- htmlmin:ignore -->
-title = "<%= options.name %>"
+title = "test"
 url = "/:all?*"
+==
+function onStart()
+{
+    $vuetober = [
+        'token' => Session::token(),
+    ];
+
+    $this['vuetober'] = json_encode($vuetober);
+}
 ==
 <!-- htmlmin:ignore -->
 <!DOCTYPE html>
 <html>
     <head>
+        <!-- meta -->
         <meta charset="utf-8">
         <meta content="IE=edge" http-equiv="X-UA-Compatible">
         <meta content="width=device-width,initial-scale=1.0" name="viewport">
-        <title><%= options.name %></title>
+        <meta content="{{ vuetober }}" name="vuetober">
+
+        <!-- title -->
+        <title>test</title>
     </head>
     <body>
         <noscript>
