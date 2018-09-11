@@ -4,11 +4,18 @@ url = "/:all?*"
 ==
 function onStart()
 {
-    $vuetober = [
-        'token' => Session::token(),
-    ];
+    $app = app();
+    
+    // allow cors requests in development
+    if ($app->env !== 'development') {
+        header("Access-Control-Allow-Origin: *");
+    }
 
-    $this['vuetober'] = json_encode($vuetober);
+    // initial data
+    $this['vuetober'] = json_encode([
+        'env' => $app->env,
+        'token' => Session::token(),
+    ]);
 }
 ==
 <!-- htmlmin:ignore -->
@@ -19,10 +26,13 @@ function onStart()
         <meta charset="utf-8">
         <meta content="IE=edge" http-equiv="X-UA-Compatible">
         <meta content="width=device-width,initial-scale=1.0" name="viewport">
+
+        <!-- vuetober -->
+        <!-- this will be auto injected in development -->
         <meta content="{{ vuetober }}" name="vuetober">
 
         <!-- title -->
-        <title>test</title>
+        <title><%= options.name %></title>
     </head>
     <body>
         <noscript>
