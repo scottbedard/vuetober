@@ -1,6 +1,22 @@
 title = "Vuetober"
 url = "/:all?*"
 ==
+function onStart()
+{
+    $app = app();
+    
+    // allow cors requests in development
+    if ($app->env !== 'development') {
+        header("Access-Control-Allow-Origin: *");
+    }
+
+    // initial data
+    $this['vuetober'] = json_encode([
+        'env' => $app->env,
+        'token' => Session::token(),
+    ]);
+}
+==
 <!DOCTYPE html>
 <html>
     <head>
