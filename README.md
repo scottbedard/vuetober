@@ -1,8 +1,11 @@
 <p align="center">
     <img height="64px" src="http://i.imgur.com/Ia3H0Ae.png" /><br />
     <br />
+    <a href="https://www.npmtrends.com/vue-cli-plugin-vuetober">
+        <img src="https://img.shields.io/npm/dt/vue-cli-plugin-vuetober.svg" alt="Downloads" />
+    </a>
     <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetober">
-        <img src="https://img.shields.io/npm/v/vue-cli-plugin-vuetober.svg" alt="NPM version" />
+        <img src="https://img.shields.io/npm/v/vue-cli-plugin-vuetober.svg" alt="Version" />
     </a>
     <a href="https://github.com/scottbedard/oc-vuetober-theme/blob/master/LICENSE">
         <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT" />
