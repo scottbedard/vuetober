@@ -6,7 +6,7 @@ function onStart()
     $app = app();
     
     // allow cors requests in development
-    if ($app->env !== 'development') {
+    if ($app->env === 'development') {
         header("Access-Control-Allow-Origin: *");
     }
 
