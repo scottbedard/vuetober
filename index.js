@@ -1,5 +1,8 @@
 var path = require('path');
 
+var isProduction = process.env.NODE_ENV === 'production';
+var themeDir = path.resolve(__dirname, '../..').split('\\').slice(-1).pop();
+
 module.exports = (api, options) => {
     // set webpack's output directory to /assets
     options.outputDir = 'assets';
@@ -8,6 +11,9 @@ module.exports = (api, options) => {
     // production
     //
     if (process.env.NODE_ENV === 'production') {
+        // in production reference assets from theme directory
+        options.baseUrl = '/themes/' + themeDir + '/assets';
+
         // save our only page to /pages
         api.chainWebpack(function(config) {
             config.plugin('html').tap(function(args) {
