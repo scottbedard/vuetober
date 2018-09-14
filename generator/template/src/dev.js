@@ -1,5 +1,5 @@
 // fetch server data
-fetch(`http://vuetober.october.test${window.location.pathname}`, { mode: 'cors' })
+fetch(`<%= options.server %>${window.location.pathname}`, { mode: 'cors' })
     .then(response => response.text())
     .then(html => {
         const parser = new DOMParser();
