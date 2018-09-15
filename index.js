@@ -12,7 +12,7 @@ module.exports = (api, options) => {
     //
     if (process.env.NODE_ENV === 'production') {
         // in production reference assets from theme directory
-        options.baseUrl = '/themes/' + themeDir + '/assets';
+        options.baseUrl = '/themes/' + themeDir + '/assets/';
 
         // save our only page to /pages
         api.chainWebpack(function(config) {
