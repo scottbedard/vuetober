@@ -34,7 +34,7 @@ module.exports = (api, options) => {
         // use our dev entry point
         api.configureWebpack(function(config) {
             config.entry = { 
-                app: ['./src/dev.js'],
+                app: ['./src/dev'],
             };
         });
     }
