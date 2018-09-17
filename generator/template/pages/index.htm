@@ -2,14 +2,7 @@ title = "<%= options.name %>"
 url = "/:all?*"
 ==
 function onStart()
-{php
-    $app = app();
-    
-    // allow cors requests in development
-    if ($app->env === 'development') {
-        header('Access-Control-Allow-Origin: *');
-    }
-    
+{
     App::abort(500, 'Vuetober entry point is not built, execute "npm run build" or "yarn build" and try again.');
 }
 ==

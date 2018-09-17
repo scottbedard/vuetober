@@ -18,5 +18,8 @@
   "homepage": "https://github.com/scottbedard/oc-vuetober-theme#readme",
   "peerDependencies": {
     "@vue/cli-shared-utils": "^3.0.1"
+  },
+  "devDependencies": {
+    "write-file-webpack-plugin": "^4.4.0"
   }
 }
