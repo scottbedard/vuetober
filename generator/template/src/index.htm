@@ -4,13 +4,10 @@ url = "/:all?*"
 ==
 function onStart()
 {
-    $app = app();
-    
-    // initial data
-    $this['vuetober'] = json_encode([
-        'env' => $app->env,
+    $this['vuetober'] = [
+        'env' => app()->env,
         'token' => Session::token(),
-    ]);
+    ];
 }
 ==
 <!-- htmlmin:ignore -->
@@ -20,11 +17,8 @@ function onStart()
         <!-- meta -->
         <meta charset="utf-8">
         <meta content="IE=edge" http-equiv="X-UA-Compatible">
-        <meta content="width=device-width,initial-scale=1.0" name="viewport">
-
-        <!-- vuetober -->
-        <!-- this will be auto injected in development -->
-        <meta content="{{ vuetober }}" name="vuetober">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="vuetober" content="{{ vuetober | json_encode }}" />
 
         <!-- title -->
         <title><%= options.name %></title>
