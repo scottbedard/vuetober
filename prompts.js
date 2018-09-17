@@ -36,4 +36,9 @@ module.exports = [
         name: 'author',
         type: 'input',
     },
+    {
+        message: 'Set as active theme',
+        name: 'activate',
+        type: 'confirm',
+    },
 ]
