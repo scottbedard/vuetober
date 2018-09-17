@@ -19,7 +19,8 @@
   "peerDependencies": {
     "@vue/cli-shared-utils": "^3.0.1"
   },
-  "devDependencies": {
+  "devDependencies": {},
+  "dependencies": {
     "write-file-webpack-plugin": "^4.4.0"
   }
 }
