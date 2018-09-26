@@ -31,7 +31,7 @@ module.exports = (api, options) => {
     // use dev assets when not in production
     options.baseUrl = isProduction 
         ? getProductionBaseUrl(api, pluginOptions) 
-        : 'http://localhost:8080';
+        : 'http://localhost:8080/';
 
     // set webpack's output directory to /assets
     options.outputDir = 'assets';
