@@ -1,14 +1,37 @@
 var path = require('path');
 var WriteFilePlugin = require('write-file-webpack-plugin');
 
+// helper function to get the base url for theme assets
+// if no explicit value is set, we'll try to use the theme directory
+function getProductionBaseUrl(api, pluginOptions) {
+    var baseUrl = pluginOptions.baseUrl;
+
+    if (typeof baseUrl !== 'undefined') {
+        return baseUrl.endsWith('/') ? baseUrl : baseUrl + '/';
+    }
+
+    return api.resolve('assets').split('/').slice(-3).join('/') + '/';
+}
+
+// helper function for resolving configuration
+// returns undefined if object does not have property
+function resolveProperty(obj, p) {
+    return p.split('.').reduce(function(p, k) {
+        return p && p[k];
+    }, obj);
+}
+
 module.exports = (api, options) => {
     var isProduction = process.env.NODE_ENV === 'production';
-    var themeDir = path.resolve(__dirname, '../..').split('\\').slice(-1).pop();
+
+    var pluginOptions = resolveProperty(options, 'pluginOptions.vuetober') || {
+        baseUrl: undefined,
+    };
 
     // use dev assets when not in production
     options.baseUrl = isProduction 
-        ? '/themes/' + themeDir + '/assets/' 
-        : 'http://localhost:8080/';
+        ? getProductionBaseUrl(api, pluginOptions) 
+        : 'http://localhost:8080';
 
     // set webpack's output directory to /assets
     options.outputDir = 'assets';
