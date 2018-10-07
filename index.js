@@ -10,7 +10,7 @@ function getProductionBaseUrl(api, pluginOptions) {
         return baseUrl.endsWith('/') ? baseUrl : baseUrl + '/';
     }
 
-    return api.resolve('assets').split('/').slice(-3).join('/') + '/';
+    return '/' + api.resolve('assets').split('/').slice(-3).join('/') + '/';
 }
 
 // helper function for resolving configuration
