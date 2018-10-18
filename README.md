@@ -34,10 +34,10 @@ yarn global add @vue/cli
 
 #### Option #1: Start from scratch
 
-This is a good option for people who are more comfortable with Vuetober, and know a bit about how the build tooling works. Doing this will simply transform your vue-cli application to work as an October theme. It'll be up to you to decide which tools you'd like to include in your project, and how to structure your code. To start from the beginning, follow these steps...
+This is a good option for people who are more comfortable with Vuetober, and know a bit about how the build tooling works. Doing this will simply transform your vue-cli application to work as an October theme. It'll be up to you to decide which tools you'd like to include in your project, and how to structure your code. To start from scratch, follow these steps...
 
 1. Create a new vue-cli project in your `/themes` directory
-2. Install [`vue-cli-plugin-vuetober`](https://www.npmjs.com/package/vue-cli-plugin-vuetober)
+2. Add the [`vue-cli-plugin-vuetober`](https://www.npmjs.com/package/vue-cli-plugin-vuetober) plugin
 
 #### Option #2: Use the pre-configured SPA
 
