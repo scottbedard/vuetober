@@ -28,8 +28,13 @@ module.exports = (api, options) => {
         baseUrl: undefined,
     };
 
-    // use dev assets when not in production
-    options.baseUrl = isProduction 
+    // configure the dev server and public path based on environment
+    options.devServer = {
+        disableHostCheck: true,
+        public: 'http://localhost:8080',
+    };
+
+    options.publicPath = isProduction 
         ? getProductionBaseUrl(api, pluginOptions) 
         : 'http://localhost:8080/';
 
