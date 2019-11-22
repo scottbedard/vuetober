@@ -1,6 +1,6 @@
 {
   "name": "vue-cli-plugin-vuetober",
-  "version": "3.0.0-rc.3",
+  "version": "3.0.0",
   "description": "October CMS plugin for vue-cli",
   "main": "index.js",
   "scripts": {
