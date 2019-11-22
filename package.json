@@ -1,7 +1,7 @@
 {
   "name": "vue-cli-plugin-vuetober",
-  "version": "3.0.0-rc.2",
-  "description": "octobercms plugin for vue-cli",
+  "version": "3.0.0-rc.3",
+  "description": "October CMS plugin for vue-cli",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
