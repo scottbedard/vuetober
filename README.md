@@ -12,33 +12,44 @@
     </a>
 </p>
 
-Welcome to the beta for the next major version of Vuetober. This version is being done as a plugin for vue-cli 3. Hand pick the features you want and enjoy the latest technologies with the best tools. More documentation will be coming soon. Be advised, this plugin is in beta and is not ready for production use. Changes may happen at any time.
-
-## Overview
-
-Vuetober 3 represents a major change from version 2. For starters, this project is now much less opinionated. The vue-cli plugin will simply transform your vue project to work as an October theme. Meaning you're now free to make an SPA, use TypeScript, utilize whichever test framework you want, etc... Eventually this plugin will play nicely with all [first-party plugins](https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue).
-
-Another big change is that we no longer need to manually manage Webpack configuration files. In fact, we can even run things from the amazing new GUI if we want to. Since Vuetober themes now live inside the vue-cli ecosystem, the webpack configuration will be composed dynamically. I highly recommend [giving this article a read](https://medium.com/the-vue-point/vue-cli-3-0-is-here-c42bebe28fbb), For the tl;dr version, just think of webpack loaders as plugins. You're free to mix and match, and the plugin maintainers will keep your config up to date.
+Vuetober is a [vue-cli](https://cli.vuejs.org) plugin for creating October themes with the latest frontend tooling. Say goodbye to managing complicated Webpack configuration and build scripts. Just select the features you want, and get to work!
 
 ## Getting started
 
- The first thing you'll need to do is [install vue-cli](https://cli.vuejs.org/guide/installation.html). Once this is done you have two options, which depend on your experience with vue-cli and what you're trying to build. For newcomers, it is recommended to use the pre-configured SPA.
+There are two ways to get started with Vuetober. If you're new to vue-cli, we recommend [using the pre-built SPA](https://github.com/scottbedard/vuetober-spa). Starting this way lets us make some decisions for you. Just perform a `git clone`, and you're theme is ready to go. [This article](https://medium.com/the-vue-point/vue-cli-3-0-is-here-c42bebe28fbb) provides a good overview of what vue-cli even is, and why you should consider using it.
+
+For more experienced users, use the following steps to create a custom Vuetober setup.
+
+1. Install vue-cli, [see documentation here](https://cli.vuejs.org/guide/installation.html)
+2. From `/themes`, execute the following commands:
+   - `vue create mytheme` and select what features you'd like
+   - `cd mytheme`
+   - `vue add vuetober` and follow the prompts
+   
+Once this is done, the following commands should be available:
 
 ```bash
-npm install -g @vue/cli
+# start development server
+yarn serve
 
-# or
-
-yarn global add @vue/cli
+# build production assets
+yarn build
 ```
 
-#### Option #1: Start from scratch
+Other commands may also be available, depending on the features selected in step 1. Check your `package.json` for a complete list.
 
-This is a good option for people who are more comfortable with Vuetober, and know a bit about how the build tooling works. Doing this will simply transform your vue-cli application to work as an October theme. It'll be up to you to decide which tools you'd like to include in your project, and how to structure your code. To start from scratch, follow these steps...
+## Advanced usage
 
-1. Create a new vue-cli project in your `/themes` directory
-2. Add the [`vue-cli-plugin-vuetober`](https://www.npmjs.com/package/vue-cli-plugin-vuetober) plugin
+#### SEO optimization
 
-#### Option #2: Use the pre-configured SPA
+We recommend adding the [RainLab.Sitemap](https://github.com/rainlab/sitemap-plugin) and [Bedard.Prerender](https://github.com/scottbedard/oc-prerender-plugin) plugins. When used together, these can make sure your application is compatible with crawlers for sites like Google, Facebook, and Twitter.
 
-The other option is to let us make some decisions for you, and hit the ground running with a production ready SPA. In many cases, it's easier to do this and simply remove features you don't want than it is to start from scratch. To start building a single page application, [head over to the vuetober-spa repository](https://github.com/scottbedard/vuetober-spa).
+#### Continuous integration & code coverage
+
+For themes that include frontend unit tests, it's best to connect them to a service like [Circle CI](https://circleci.com) and [Codecov](https://codecov.io) to get the most out of them. In the future we will provide documentation on setting this up. For now, feel free to use [this theme](https://github.com/scottbedard/speedcube.site/blob/dev/circle.yml#L73-L95) as an example.
+
+## License
+
+[MIT](https://github.com/scottbedard/oc-vuetober-theme/blob/master/LICENSE)
+
+Copyright (c) 2016-present, Scott Bedard
