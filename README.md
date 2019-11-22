@@ -14,7 +14,7 @@
 
 This project is an opinionated approach to single page applications within the awesome worlds of [Vue.js](https://vuejs.org), [October CMS](https://octobercms.com), and [Laravel](https://laravel.com). To see what's included out of the box, check out the [live demo](http://vuetober.scottbedard.net).
 
-> **Note:** The next version of Vuetober will be a vue-cli plugin. [Click here to help us test drive it](https://github.com/scottbedard/oc-vuetober-theme/tree/cli).
+> **Note:** This version is deprecated, please use the vue-cli plugin instead.
 
 <a name="installation"></a>
 ## Installation
