@@ -4,6 +4,9 @@
     <a href="https://www.npmtrends.com/vue-cli-plugin-vuetober">
         <img src="https://img.shields.io/npm/dt/vue-cli-plugin-vuetober.svg" alt="Downloads" />
     </a>
+    <a href="https://david-dm.org/scottbedard/vuetober">
+        <img alt="Depdendencies" src="https://img.shields.io/david/scottbedard/vuetober" />
+    </a>
     <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetober">
         <img src="https://img.shields.io/npm/v/vue-cli-plugin-vuetober.svg" alt="Version" />
     </a>
