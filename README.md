@@ -16,7 +16,7 @@ Vuetober is a [vue-cli](https://cli.vuejs.org) plugin for creating October theme
 
 ## Getting started
 
-There are two ways to get started with Vuetober. If you're new to vue-cli, we recommend [using the pre-built SPA](https://github.com/scottbedard/vuetober-spa). Starting this way lets us make some decisions for you. Just perform a `git clone`, and you're theme is ready to go. [This article](https://medium.com/the-vue-point/vue-cli-3-0-is-here-c42bebe28fbb) provides a good overview of what vue-cli even is, and why you should consider using it.
+There are two ways to get started with Vuetober. If you're new to vue-cli, we recommend [using the pre-built SPA](https://github.com/scottbedard/vuetober-spa). Starting this way lets us make some decisions for you. Just perform a `git clone`, and you're theme is ready to go. [This article](https://medium.com/the-vue-point/vue-cli-3-0-is-here-c42bebe28fbb) provides a good overview of what vue-cli is, and why you should consider using it.
 
 For more experienced users, use the following steps to create a custom Vuetober setup.
 
@@ -40,11 +40,11 @@ Other commands may also be available, depending on the features selected in step
 
 ## Advanced usage
 
-#### SEO optimization
+### SEO optimization
 
 We recommend adding the [RainLab.Sitemap](https://github.com/rainlab/sitemap-plugin) and [Bedard.Prerender](https://github.com/scottbedard/oc-prerender-plugin) plugins. When used together, these can make sure your application is compatible with crawlers for sites like Google, Facebook, and Twitter.
 
-#### Continuous integration & code coverage
+### Continuous integration
 
 For themes that include frontend unit tests, it's best to connect them to a service like [Circle CI](https://circleci.com) and [Codecov](https://codecov.io) to get the most out of them. In the future we will provide documentation on setting this up. For now, feel free to use [this theme](https://github.com/scottbedard/speedcube.site/blob/dev/circle.yml#L73-L95) as an example.
 
