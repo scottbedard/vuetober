@@ -43,7 +43,7 @@ Other commands may also be available, depending on the features selected in step
 
 ## Using plugins
 
-One thing to be aware of when developing Vuetober themes is that extra work is usually needed to integrate various plugins. Since all rendering is done on the client side, October's frontend utilities cannot be used. This includes components and the AJAX framework. Below is a list of plugins that have been made to help bridge the gap.
+When developing Vuetober themes, APIs are usually needed to communicate with plugins. Since all rendering is done on the client side, October's frontend utilities like components and the AJAX framework cannot be used. Below is a list of plugins that have been made to help bridge the gap.
 
 - [RainLab.User](https://github.com/scottbedard/rainlab-user-api)
 
