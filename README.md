@@ -39,11 +39,11 @@ yarn serve
 yarn build
 ```
 
-Other commands may also be available, depending on the features selected in step 1. Check your `package.json` for a complete list.
+Other commands may also be available, depending on the feature selection. Check your `package.json` for a complete list.
 
 ## Using plugins
 
-When developing Vuetober themes, APIs are usually needed to communicate with plugins. Since all rendering is done on the client side, October's frontend utilities like components and the AJAX framework cannot be used. Below is a list of plugins that have been made to help bridge the gap.
+When developing Vuetober themes, APIs are usually needed to communicate with plugins. Since all rendering is done on the client side, October's frontend utilities like components and the AJAX framework are not available. Below is a list of plugins that have been made to help bridge the gap.
 
 - [RainLab.User](https://github.com/scottbedard/rainlab-user-api)
 
@@ -56,6 +56,13 @@ We recommend adding the [RainLab.Sitemap](https://github.com/rainlab/sitemap-plu
 ### Continuous integration
 
 For themes that include frontend unit tests, it's best to connect them to a service like [Circle CI](https://circleci.com) and [Codecov](https://codecov.io) to get the most out of them. In the future we will provide documentation on setting this up. For now, feel free to use [this theme](https://github.com/scottbedard/speedcube.site/blob/dev/circle.yml#L73-L95) as an example.
+
+## Showcase
+
+Here are a couple sites to show what Vuetober themes are capable of. Feel free to add your projects to this list!
+
+- [The Speedcube Site](https://speedcube.site)
+- [scottbedard.net](https://scottbedard.net)
 
 ## License
 
