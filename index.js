@@ -5,12 +5,13 @@ var WriteFilePlugin = require('write-file-webpack-plugin');
 // if no explicit value is set, we'll try to use the theme directory
 function getProductionBaseUrl(api, pluginOptions) {
     var baseUrl = pluginOptions.baseUrl;
+    const osSeparator = path.sep
 
     if (typeof baseUrl !== 'undefined') {
         return baseUrl.endsWith('/') ? baseUrl : baseUrl + '/';
     }
 
-    return '/' + api.resolve('assets').split('/').slice(-3).join('/') + '/';
+    return '/' + api.resolve('assets').split(osSeparator).slice(-3).join('/') + '/';
 }
 
 // helper function for resolving configuration
